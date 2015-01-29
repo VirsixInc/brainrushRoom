@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
   float startTime;
   float journeyLength;
   float speed = 3f;
-  float cameraRotSpeed = 0.05f;
+  float cameraRotSpeed = 0.5f;
 
 
   //Vars for puzzleEvent
@@ -32,6 +32,13 @@ public class GameManager : MonoBehaviour {
       Vector3 pos = camObj.GetChild(0).transform.position-Camera.main.transform.position;
       Quaternion newRot = Quaternion.LookRotation(pos);
       Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, newRot, cameraRotSpeed);
+      print("Frac: " + fracJourney);
+      print("CamRot: " + Camera.main.transform.rotation + "    NewRot: " + newRot);
+      
+      if(fracJourney > 1.0f && Camera.main.transform.rotation == newRot){
+        cameraMove = false;
+        print("CAM DONE MOVING");
+      }
       //Camera.main.transform.LookAt(camObj.GetChild(0));
     }
 	}
