@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
   Vector3 endPos;
   float startTime;
   float journeyLength;
-  float speed = 3f;
+  float speed = 9f;
   float cameraRotSpeed = 0.5f;
 
 

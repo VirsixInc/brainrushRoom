@@ -10,22 +10,7 @@ public class ViewControl : MonoBehaviour {
 	private bool isPanning;
 	private bool isRotating;
 
-	void OnEnable()
-	{
-		Response.s_OnClicked += MoveToPosition;
-	}
 
-
-	void OnDisable()
-	{
-		Response.s_OnClicked -= MoveToPosition;	
-	}
-
-//	void Start () 
-//	{
-//
-//	}
-	
 
 	void Update () 
 	{
@@ -33,6 +18,11 @@ public class ViewControl : MonoBehaviour {
 		{
 			mouseOrigin = Input.mousePosition;
 			isRotating = true;
+		}
+
+		if (Input.GetMouseButtonUp(0))
+		{
+			isRotating = false;
 		}
 
 		if (isRotating) 
@@ -45,9 +35,7 @@ public class ViewControl : MonoBehaviour {
 	}
 
 
-	void MoveToPosition(){
 
-	}
 	
 
 }
