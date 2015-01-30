@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour {
       float distCovered = (Time.time-startTime)*speed;
       float fracJourney = distCovered/journeyLength;
       Camera.main.transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
-      Vector3 pos = camObj.GetChild(0).transform.position-Camera.main.transform.position;
-      Quaternion newRot = Quaternion.LookRotation(pos);
+      Vector3 pos = camObj.GetChild(0).transform.position-Camera.main.transform.position; //gets the first child in the the waypoint's hierarchy which is a lookAtObj.
+	  Quaternion newRot = Quaternion.LookRotation(pos); //lerp to the rotation it would take to look at the lookAtObj from the camera's current rotation
       Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, newRot, cameraRotSpeed);
       
       if(fracJourney > 1.0f && Camera.main.transform.rotation == newRot){
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour {
         endPos = objClicked.transform.position;
         journeyLength = Vector3.Distance(startPos, endPos);
         startTime = Time.time;
-        camObj = objClicked.transform;
+        camObj = objClicked.transform; //gets the transform of the collider
         break;
       case "puzzleEvent":
         print("PUZZLE EVENT");
