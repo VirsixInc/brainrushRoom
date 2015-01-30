@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour {
 
   public GameObject highlightedObj;
 
+  public static GameManager s_instance;
 
 
 
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour {
 
   //Vars for puzzleEvent
 	void Start () {
-	
+		s_instance = this;
 	}
 	
 	// Update is called once per frame
