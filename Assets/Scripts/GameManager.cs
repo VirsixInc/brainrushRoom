@@ -5,6 +5,9 @@ public class GameManager : MonoBehaviour {
 
   public GameObject highlightedObj;
 
+
+
+
   //Vars for camera movement
 
   Transform camObj;
