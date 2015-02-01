@@ -6,6 +6,7 @@ public class InventoryManager : MonoBehaviour {
 	//InventoryManager makes sure that only one slot is highlighted at a time.
 	//InventoryManager makes sure that new items goto the correct spot in the inventory aka it manages the array of InventorySlot
 	//Does Inventory need to be carried across levels?
+	//NOTE: InventoryManager must be on a canvas and the canvas must be called "InventoryManager"
 
 	public static InventoryManager s_instance;
 

@@ -36,8 +36,9 @@ public class GameManager : MonoBehaviour {
       Vector3 pos = camObj.GetChild(0).transform.position-Camera.main.transform.position; //gets the first child in the the waypoint's hierarchy which is a lookAtObj.
 	  Quaternion newRot = Quaternion.LookRotation(pos); //lerp to the rotation it would take to look at the lookAtObj from the camera's current rotation
       Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, newRot, cameraRotSpeed);
-      
-      if(fracJourney > 1.0f && Camera.main.transform.rotation == newRot){
+			print(Quaternion.Angle(Camera.main.transform.rotation, newRot));
+			//print(Camera.main.transform.rotation.eulerAngles + "   NEW ROT :  " + newRot.eulerAngles);
+	if(fracJourney > 1.0f && 1f < Quaternion.Angle(Camera.main.transform.rotation, newRot)){
         cameraMove = false;
         print("CAM DONE MOVING");
       }
