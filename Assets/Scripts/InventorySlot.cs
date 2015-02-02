@@ -22,23 +22,30 @@ public class InventorySlot : MonoBehaviour {
 	//happens when you have a match with the chest in the scene
 	public void UseItem () {
 		isHighlighted = false;
+		transform.GetChild (0).gameObject.GetComponent<Image> ().color = Color.black;
 		childedPuzzleObject = null;
 	}
 
 	public void HighlightItem () {
 		print ("highlight");
 		isHighlighted = true;
-//		GameManager.SendMessage("setHighlightedObj", childedPuzzleObject);
 		thisImage.color = Color.green;
 	}
 
 	public void UnHighlightItem () {
 		isHighlighted = false;
-		thisImage.color = Color.black;
+		thisImage.color = Color.white;
 	}
 
-	public void AttachItem (Sprite itemSprite) {
+	public void AttachItem (GameObject newPuzzleObject) {
+		childedPuzzleObject = newPuzzleObject;
+		if (newPuzzleObject.GetComponent<PuzzleObject> ().inventoryImage != null) {
+			print (newPuzzleObject.GetComponent<PuzzleObject> ().inventoryImage.ToString());
+		}
 
+		transform.GetChild (0).gameObject.GetComponent<Image> ().sprite =  newPuzzleObject.GetComponent<PuzzleObject> ().inventoryImage;
+		transform.GetChild (0).gameObject.GetComponent<Image> ().color = Color.white;
+		//thisImage.GetComponentInChildren<Image> ().sprite = newPuzzleObject.GetComponent<PuzzleObject> ().inventoryImage.sprite;
 	}
 
 }
