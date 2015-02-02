@@ -54,9 +54,10 @@ public class InventoryManager : MonoBehaviour {
 		//where key would goto lock, key could be key for door, plug for sockey, ammo for gun etc...
 		if (isASlotHighlighted)
 			if (inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject.GetComponent<PuzzleObject> ().name == key) {
-				//do something
-				inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().UseItem(); //needs to be way modified
-				
+				inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject.GetComponent<PuzzleObject> ().gameObjectInActivatedState.SetActive(true);
+				inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject.SetActive(false);
+				inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject = null;
+				isASlotHighlighted = false;
 			}
 	}
 
@@ -65,6 +66,7 @@ public class InventoryManager : MonoBehaviour {
 			//find the first empty spot and put it there
 			if (x.GetComponent<InventorySlot>().childedPuzzleObject == null) {
 				x.GetComponent<InventorySlot>().childedPuzzleObject = item;
+
 			}
 		}
 	}
