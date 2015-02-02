@@ -6,6 +6,6 @@ public class PuzzleObjectActivator : MonoBehaviour {
 	public string key;
 
 	void OnMouseDown() {
-		GameManager.s_instance.CheckHighlightedInventoryObj (key);
+		InventoryManager.s_instance.UseItem (key);
 	}
 }

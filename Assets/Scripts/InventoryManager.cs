@@ -54,7 +54,7 @@ public class InventoryManager : MonoBehaviour {
 		//where key would goto lock, key could be key for door, plug for sockey, ammo for gun etc...
 		if (isASlotHighlighted)
 			if (inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject.GetComponent<PuzzleObject> ().name == key) {
-				inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject.GetComponent<PuzzleObject> ().gameObjectInActivatedState.SetActive(true);
+				inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject.GetComponent<PuzzleObject> ().gameObjectInActivatedState.SetActive(true); //object double is activated in scene
 				inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject.SetActive(false);
 				inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject = null;
 				isASlotHighlighted = false;

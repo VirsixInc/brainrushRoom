@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void CheckHighlightedInventoryObj(string keyName) {
-		InventoryManager.s_instance.UseItem (keyName);
 	}
 
 

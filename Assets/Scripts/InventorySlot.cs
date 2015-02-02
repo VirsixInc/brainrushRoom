@@ -37,4 +37,8 @@ public class InventorySlot : MonoBehaviour {
 		thisImage.color = Color.black;
 	}
 
+	public void AttachItem (Sprite itemSprite) {
+
+	}
+
 }
