@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
   public GameObject highlightedObj;
 
   public static GameManager s_instance;
+
+  public List<GameObject>[] winConditions;
+	int curEvent;
 
   //Vars for camera movement
 
@@ -62,4 +66,22 @@ public class GameManager : MonoBehaviour {
 		break;
 		}
 	}
+
+	public void goToNextEvent(){
+		int winCount = 0;
+		foreach (GameObject x in winConditions[curEvent]) {
+			if(x.activeSelf){
+				winCount++;
+			}		
+		}
+		if (winCount == winConditions [curEvent].Count) {
+			Win(curEvent);
+			curEvent++;
+		}
+	}
+
+	public void Win(int eventIndex){
+
+	}
+
 }
