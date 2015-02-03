@@ -23,7 +23,6 @@ public class PlayAnimation : MonoBehaviour {
 	void playAnimation(GameObject activator){
 
 		if(activator.activeSelf){
-			print ("dicks");
 			myAnimator.SetBool("isOpen", true);
 		}
 	}
