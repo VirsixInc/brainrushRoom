@@ -60,6 +60,8 @@ public class InventoryManager : MonoBehaviour {
 				inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject.SetActive(false);
 				inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject = null;
 				inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().UseItem();
+				inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().UnHighlightItem();
+
 				isASlotHighlighted = false;
 			}
 		}
