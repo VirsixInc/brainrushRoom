@@ -24,10 +24,7 @@ public class FlashlightOpen : MonoBehaviour {
 				isBuilt = true;
 			}
 		}
-		else if(!lightOn){
-			Camera.main.transform.GetChild(0).gameObject.SetActive(true);
-			lightOn = true;
-		}
+
 
 
 	}
@@ -37,6 +34,12 @@ public class FlashlightOpen : MonoBehaviour {
 			frontCollider.enabled = false;
 			backCollider.enabled = false;
 			myAnimator.SetBool("isOpen", false);
+			if(isBuilt && !lightOn){
+				Camera.main.transform.GetChild(0).gameObject.SetActive(true);
+				Debug.Log ("lightOn");
+				lightOn = true;
+				gameObject.SetActive(false);
+			}
 		}
 		else if(!myAnimator.GetBool("isOpen")){
 			frontCollider.enabled = true;
