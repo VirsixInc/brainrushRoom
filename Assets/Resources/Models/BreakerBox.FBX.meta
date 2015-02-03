@@ -1,40 +1,25 @@
 fileFormatVersion: 2
-guid: 444dddd1716cb604699cfe69cf6c3baa
+guid: 7c0ecae8ef602da4d95f578a613484a4
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: FlashlightBack
-    100004: FlashlightBulb
-    100006: FlashlightFront
-    100008: FlashlightSwitch
-    100010: polySurface24
-    100012: FlashlightLatch
+    100002: BreakerBox
+    100004: BreakerBox_Arrow
+    100006: Breakerbox_Handle
     400000: //RootNode
-    400002: FlashlightBack
-    400004: FlashlightBulb
-    400006: FlashlightFront
-    400008: FlashlightSwitch
-    400010: polySurface24
-    400012: FlashlightLatch
-    2300000: FlashlightBack
-    2300002: FlashlightBulb
-    2300004: FlashlightFront
-    2300006: FlashlightSwitch
-    2300008: polySurface24
-    2300010: FlashlightLatch
-    3300000: FlashlightBack
-    3300002: FlashlightBulb
-    3300004: FlashlightFront
-    3300006: FlashlightSwitch
-    3300008: polySurface24
-    3300010: FlashlightLatch
-    4300000: polySurface24
-    4300002: FlashlightSwitch
-    4300004: FlashlightBulb
-    4300006: FlashlightFront
-    4300008: FlashlightBack
-    4300010: FlashlightLatch
+    400002: BreakerBox
+    400004: BreakerBox_Arrow
+    400006: Breakerbox_Handle
+    2300000: BreakerBox
+    2300002: BreakerBox_Arrow
+    2300004: Breakerbox_Handle
+    3300000: BreakerBox
+    3300002: BreakerBox_Arrow
+    3300004: Breakerbox_Handle
+    4300000: BreakerBox
+    4300002: BreakerBox_Arrow
+    4300004: Breakerbox_Handle
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -55,7 +40,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .100000001
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
