@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: 3d9d61a9981afa847ac9ea0721ccbc68
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: AltarBody
+    100002: AltarInnerDoor
+    100004: AltarInnerDoorGroup
+    100006: //RootNode
+    100008: AltarOuterDoor
+    100010: AltarOuterDoorGroup
+    100012: Alter_Main
+    100014: alter_rod
+    100016: alterBase
+    100018: spinnyThingy
+    400000: AltarBody
+    400002: AltarInnerDoor
+    400004: AltarInnerDoorGroup
+    400006: //RootNode
+    400008: AltarOuterDoor
+    400010: AltarOuterDoorGroup
+    400012: Alter_Main
+    400014: alter_rod
+    400016: alterBase
+    400018: spinnyThingy
+    2300000: AltarInnerDoor
+    2300002: AltarOuterDoor
+    2300004: Alter_Main
+    2300006: alter_rod
+    2300008: alterBase
+    2300010: spinnyThingy
+    3300000: AltarInnerDoor
+    3300002: AltarOuterDoor
+    3300004: Alter_Main
+    3300006: alter_rod
+    3300008: alterBase
+    3300010: spinnyThingy
+    4300000: alterBase
+    4300002: spinnyThingy
+    4300004: AltarInnerDoor
+    4300006: AltarOuterDoor
+    4300008: Alter_Main
+    4300010: alter_rod
+    7400000: Altar_Idle
+    7400002: Altar_Opening
+    7400004: Alter_Open
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Altar_Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: AltarBody
+        weight: 1
+      - path: AltarBody/AltarInnerDoorGroup
+        weight: 1
+      - path: AltarBody/AltarInnerDoorGroup/AltarInnerDoor
+        weight: 1
+      - path: AltarBody/AltarOuterDoorGroup
+        weight: 1
+      - path: AltarBody/AltarOuterDoorGroup/AltarOuterDoor
+        weight: 1
+      - path: AltarBody/Alter_Main
+        weight: 1
+      - path: AltarBody/alter_rod
+        weight: 1
+      - path: AltarBody/spinnyThingy
+        weight: 1
+      - path: alterBase
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Altar_Opening
+      takeName: Take 001
+      firstFrame: 25
+      lastFrame: 159
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: AltarBody
+        weight: 1
+      - path: AltarBody/AltarInnerDoorGroup
+        weight: 1
+      - path: AltarBody/AltarInnerDoorGroup/AltarInnerDoor
+        weight: 1
+      - path: AltarBody/AltarOuterDoorGroup
+        weight: 1
+      - path: AltarBody/AltarOuterDoorGroup/AltarOuterDoor
+        weight: 1
+      - path: AltarBody/Alter_Main
+        weight: 1
+      - path: AltarBody/alter_rod
+        weight: 1
+      - path: AltarBody/spinnyThingy
+        weight: 1
+      - path: alterBase
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Alter_Open
+      takeName: Take 001
+      firstFrame: 160
+      lastFrame: 400
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: AltarBody
+        weight: 1
+      - path: AltarBody/AltarInnerDoorGroup
+        weight: 1
+      - path: AltarBody/AltarInnerDoorGroup/AltarInnerDoor
+        weight: 1
+      - path: AltarBody/AltarOuterDoorGroup
+        weight: 1
+      - path: AltarBody/AltarOuterDoorGroup/AltarOuterDoor
+        weight: 1
+      - path: AltarBody/Alter_Main
+        weight: 1
+      - path: AltarBody/alter_rod
+        weight: 1
+      - path: AltarBody/spinnyThingy
+        weight: 1
+      - path: alterBase
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
