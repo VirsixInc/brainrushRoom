@@ -31,7 +31,8 @@ ModelImporter:
     4300002: FlashlightSwitch
     4300004: FlashlightLatch
     4300006: FlashlightFront
-    7400000: Take 001
+    7400000: flashlightOpen
+    7400002: flashlightIdle
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -50,10 +51,52 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: flashlightOpen
       takeName: Take 001
       firstFrame: 1
       lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: FlashlightBack
+        weight: 1
+      - path: FlashlightBack/FlashLightSwitchGroup
+        weight: 1
+      - path: FlashlightBack/FlashLightSwitchGroup/FlashlightSwitch
+        weight: 1
+      - path: FlashLightFrontGroup
+        weight: 1
+      - path: FlashLightFrontGroup/FlashlightFront
+        weight: 1
+      - path: FlashLightFrontGroup/FlashLightLatchGroup
+        weight: 1
+      - path: FlashLightFrontGroup/FlashLightLatchGroup/FlashlightLatch
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: flashlightIdle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1.10000002
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
