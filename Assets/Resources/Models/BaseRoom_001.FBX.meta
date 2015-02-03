@@ -4,10 +4,47 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: door
+    100004: door_rotateNode
+    100006: doorHandle
+    100008: pillar_01
+    100010: pillar_02
+    100012: pillar_03
+    100014: pillar_04
+    100016: room_GEO
     400000: //RootNode
+    400002: door
+    400004: door_rotateNode
+    400006: doorHandle
+    400008: pillar_01
+    400010: pillar_02
+    400012: pillar_03
+    400014: pillar_04
+    400016: room_GEO
     2300000: //RootNode
+    2300002: door
+    2300004: doorHandle
+    2300006: pillar_01
+    2300008: pillar_02
+    2300010: pillar_03
+    2300012: pillar_04
+    2300014: room_GEO
     3300000: //RootNode
+    3300002: door
+    3300004: doorHandle
+    3300006: pillar_01
+    3300008: pillar_02
+    3300010: pillar_03
+    3300012: pillar_04
+    3300014: room_GEO
     4300000: NasaRoom_001
+    4300002: room_GEO
+    4300004: pillar_01
+    4300006: pillar_02
+    4300008: pillar_03
+    4300010: pillar_04
+    4300012: doorHandle
+    4300014: door
     9500000: //RootNode
   materials:
     importMaterials: 1
