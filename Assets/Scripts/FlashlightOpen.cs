@@ -16,16 +16,15 @@ public class FlashlightOpen : MonoBehaviour {
 		myCollider = gameObject.GetComponent<BoxCollider>();
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(!isBuilt){
-			if(light.activeSelf && battery.activeSelf){
-				isBuilt = true;
-			}
+
+	void PickUpFlashlight() {
+		//print (isBuilt.ToString () + "     " + lightOn.ToString ());
+		if(isBuilt && !lightOn){
+			Camera.main.transform.GetChild(0).gameObject.SetActive(true);
+			Debug.Log ("lightOn");
+			lightOn = true;
+			gameObject.SetActive(false);
 		}
-
-
 
 	}
 
@@ -34,14 +33,17 @@ public class FlashlightOpen : MonoBehaviour {
 			frontCollider.enabled = false;
 			backCollider.enabled = false;
 			myAnimator.SetBool("isOpen", false);
-			if(isBuilt && !lightOn){
-				Camera.main.transform.GetChild(0).gameObject.SetActive(true);
-				Debug.Log ("lightOn");
-				lightOn = true;
-				gameObject.SetActive(false);
+			if(!isBuilt){
+				print (light.activeSelf.ToString() + "     " + battery.activeSelf.ToString() );
+				if(light.activeSelf == true && battery.activeSelf){
+					print(isBuilt.ToString());
+					isBuilt = true;
+				}
 			}
+
 		}
 		else if(!myAnimator.GetBool("isOpen")){
+
 			frontCollider.enabled = true;
 			backCollider.enabled = true;
 			myAnimator.SetBool("isOpen", true);

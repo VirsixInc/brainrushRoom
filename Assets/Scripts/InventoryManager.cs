@@ -52,7 +52,7 @@ public class InventoryManager : MonoBehaviour {
 
 	public void UseItem(string key) {
 		//where key would goto lock, key could be key for door, plug for sockey, ammo for gun etc...
-		print (isASlotHighlighted.ToString ());
+		//print (isASlotHighlighted.ToString ());
 		if (isASlotHighlighted && inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject != null) {
 			//print (inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject.GetComponent<PuzzleObject> ().name + " ? " + key);
 			if (inventory [currentHighlightedSlot].GetComponent<InventorySlot> ().childedPuzzleObject.GetComponent<PuzzleObject> ().name == key) {
