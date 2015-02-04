@@ -8,7 +8,6 @@ public class PuzzleObjectActivator : MonoBehaviour {
 	
 
 	void OnMouseDown() {
-		print ("PUZZLEOBJECTACTIVATOR");
 		InventoryManager.s_instance.UseItem (key);
 	}
 }
