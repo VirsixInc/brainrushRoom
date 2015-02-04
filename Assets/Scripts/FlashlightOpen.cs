@@ -16,32 +16,28 @@ public class FlashlightOpen : MonoBehaviour {
 	}
 
 	void PickUpFlashlight() {
-		if(isBuilt && !lightOn){
+		print ("PICKUP");
 			Camera.main.transform.GetChild(0).gameObject.SetActive(true);
 			lightOn = true;
 			gameObject.SetActive(false);
-		}
 
 	}
 
 	void OnMouseDown(){
 		if(myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Open")){
-			frontCollider.enabled = false;
 			backCollider.enabled = false;
 			myAnimator.SetTrigger("switch");
-			if(!isBuilt){
-				if(myLight.activeSelf == true && battery.activeSelf){
-					print(isBuilt.ToString());
-					isBuilt = true;
-				}
+			if(!isBuilt && myLight.activeSelf == true && battery.activeSelf == true){
+				isBuilt = true;
+				print ("BUILT");
 			}
-
 		}
 		else if(!myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Open")){
-
-			frontCollider.enabled = true;
 			backCollider.enabled = true;
 			myAnimator.SetTrigger("switch");
 		}
+//		else if (isBuilt) {
+//			PickUpFlashlight();
+//		}
 	}
 }
