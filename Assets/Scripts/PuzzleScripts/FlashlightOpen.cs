@@ -36,8 +36,8 @@ public class FlashlightOpen : MonoBehaviour {
 			backCollider.enabled = true;
 			myAnimator.SetTrigger("switch");
 		}
-//		else if (isBuilt) {
-//			PickUpFlashlight();
-//		}
+		else if (isBuilt) {
+			PickUpFlashlight();
+		}
 	}
 }

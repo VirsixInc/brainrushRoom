@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class PuzzleObject : MonoBehaviour {
 
-	public string nameOfObject;
-	public string filePath;
 	public GameObject gameObjectInActivatedState;
 	public Sprite inventoryImage;
 
