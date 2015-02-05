@@ -8,9 +8,6 @@ public class BreakerBox : MonoBehaviour {
 	void OnMouseDown() {
 		breakerSwitch.SetTrigger ("pull");
 		StartCoroutine ("TurnOnLights");
-
-
-
 	}
 
 	IEnumerator TurnOnLights() {

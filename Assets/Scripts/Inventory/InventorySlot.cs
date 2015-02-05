@@ -39,10 +39,6 @@ public class InventorySlot : MonoBehaviour {
 
 	public void AttachItem (GameObject newPuzzleObject) {
 		childedPuzzleObject = newPuzzleObject;
-		if (newPuzzleObject.GetComponent<PuzzleObject> ().inventoryImage != null) {
-			print (newPuzzleObject.GetComponent<PuzzleObject> ().inventoryImage.ToString());
-		}
-
 		transform.GetChild (0).gameObject.GetComponent<Image> ().sprite =  newPuzzleObject.GetComponent<PuzzleObject> ().inventoryImage;
 		transform.GetChild (0).gameObject.GetComponent<Image> ().color = Color.white;
 		//thisImage.GetComponentInChildren<Image> ().sprite = newPuzzleObject.GetComponent<PuzzleObject> ().inventoryImage.sprite;
