@@ -13,8 +13,9 @@ public class FlashlightOpen : MonoBehaviour {
 
 	void PickUpFlashlight() {
 		print ("PICKUP");
-			Camera.main.transform.GetChild(0).gameObject.SetActive(true);
-			gameObject.SetActive(false);
+		Camera.main.transform.GetChild(0).gameObject.SetActive(true);
+		gameObject.SetActive(false);
+		AudioManager.s_instance.PlayAudioSource ("success");
 
 	}
 

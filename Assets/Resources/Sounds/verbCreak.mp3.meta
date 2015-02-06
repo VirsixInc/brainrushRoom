@@ -3,9 +3,9 @@ guid: cd50607cb485c4b34a89f06c9a140b6e
 AudioImporter:
   serializedVersion: 4
   format: 0
-  quality: -1
+  quality: .5
   stream: 1
-  3D: 1
+  3D: 0
   forceToMono: 0
   useHardware: 0
   loopable: 0

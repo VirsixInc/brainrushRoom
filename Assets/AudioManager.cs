@@ -7,12 +7,13 @@ public class AudioManager : MonoBehaviour {
 
 	public void PlayAudioSource(string audioSourceName) {
 		GameObject temp = GameObject.Find (audioSourceName);
+		print (audioSourceName);
 		temp.GetComponent<AudioSource> ().Play ();
 	}
 
 	// Use this for initialization
-	void Start () {
-	
+	void Awake () {
+		s_instance = this;
 	}
 	
 	// Update is called once per frame
