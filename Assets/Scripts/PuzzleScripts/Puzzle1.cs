@@ -32,8 +32,8 @@ public class Puzzle1 : MonoBehaviour {
 	}
 
 	IEnumerator Win(){
-
-		while (winningSpotlight.GetComponent<Light>().spotAngle < 115) {
+		AudioManager.s_instance.PlayAudioSource ("success");
+		while (winningSpotlight.GetComponent<Light>().spotAngle < 160) {
 			yield return new WaitForEndOfFrame();
 			winningSpotlight.GetComponent<Light>().spotAngle+=5;
 		}
