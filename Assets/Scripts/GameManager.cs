@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
   float startTime;
   float journeyLength;
   float speed = 9f;
-  float cameraRotSpeed = 0.5f;
+  float cameraRotSpeed = 0.05f;
 
   //Vars for puzzleEvent
 	void Start () {
@@ -31,15 +31,26 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(cameraMove){
-			float distCovered = (Time.time-startTime)*speed;
-			float fracJourney = distCovered/journeyLength;
-			Camera.main.transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
-			Vector3 pos = camObj.GetChild(0).transform.position-Camera.main.transform.position; //gets the first child in the the waypoint's hierarchy which is a lookAtObj.
-			Quaternion newRot = Quaternion.LookRotation(pos); //lerp to the rotation it would take to look at the lookAtObj from the camera's current rotation
-			Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, newRot, cameraRotSpeed);
-			if(fracJourney > 1.0f && 1f < Quaternion.Angle(Camera.main.transform.rotation, newRot)){
-				cameraMove = false;
-			}	
+			if (camObj.GetChild(0) != null) {
+				float distCovered = (Time.time-startTime)*speed;
+				float fracJourney = distCovered/journeyLength;
+				Camera.main.transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
+				Vector3 pos = camObj.GetChild(0).transform.position-Camera.main.transform.position; //gets the first child in the the waypoint's hierarchy which is a lookAtObj.
+				Quaternion newRot = Quaternion.LookRotation(pos); //lerp to the rotation it would take to look at the lookAtObj from the camera's current rotation
+				Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, newRot, cameraRotSpeed);
+				if(fracJourney > 1.0f && 1f < Quaternion.Angle(Camera.main.transform.rotation, newRot)){
+					cameraMove = false;
+				}
+			}
+			else if (camObj.GetChild(0) == null) {
+				float distCovered = (Time.time-startTime)*speed;
+				float fracJourney = distCovered/journeyLength;
+				Camera.main.transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
+				if(fracJourney > 1.0f){
+					cameraMove = false;
+				}
+			}
+
 		}
 	}
 
