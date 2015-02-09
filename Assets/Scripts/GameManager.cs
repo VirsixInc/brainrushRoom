@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(cameraMove){
-			if (camObj.GetChild(0) != null) {
+			if (camObj.childCount == 1) {
 				float distCovered = (Time.time-startTime)*speed;
 				float fracJourney = distCovered/journeyLength;
 				Camera.main.transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour {
 					cameraMove = false;
 				}
 			}
-			else if (camObj.GetChild(0) == null) {
+			else if (camObj.childCount == 0) {
 				float distCovered = (Time.time-startTime)*speed;
 				float fracJourney = distCovered/journeyLength;
 				Camera.main.transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
