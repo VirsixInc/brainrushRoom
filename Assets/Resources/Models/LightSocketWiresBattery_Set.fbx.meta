@@ -1,0 +1,117 @@
+fileFormatVersion: 2
+guid: f533f607edc15ef428f28a0bccfba218
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: LightBulb02
+    100006: LightSocket02
+    100008: //RootNode
+    100010: ScrewWires02
+    100012: Battery
+    100014: BatteryCase
+    100016: BulbSocket
+    100018: LightBulb03
+    100020: ScrewWires
+    100022: WireScrews
+    400000: Box001
+    400002: Box002
+    400004: LightBulb02
+    400006: LightSocket02
+    400008: //RootNode
+    400010: ScrewWires02
+    400012: Battery
+    400014: BatteryCase
+    400016: BulbSocket
+    400018: LightBulb03
+    400020: ScrewWires
+    400022: WireScrews
+    2300000: Box001
+    2300002: Box002
+    2300004: LightBulb02
+    2300006: LightSocket02
+    2300008: ScrewWires02
+    2300010: Battery
+    2300012: BatteryCase
+    2300014: BulbSocket
+    2300016: LightBulb03
+    2300018: ScrewWires
+    2300020: WireScrews
+    3300000: Box001
+    3300002: Box002
+    3300004: LightBulb02
+    3300006: LightSocket02
+    3300008: ScrewWires02
+    3300010: Battery
+    3300012: BatteryCase
+    3300014: BulbSocket
+    3300016: LightBulb03
+    3300018: ScrewWires
+    3300020: WireScrews
+    4300000: Box001
+    4300002: Box002
+    4300004: LightBulb02
+    4300006: LightSocket02
+    4300008: ScrewWires02
+    4300010: Battery
+    4300012: BatteryCase
+    4300014: LightBulb03
+    4300016: BulbSocket
+    4300018: ScrewWires
+    4300020: WireScrews
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
