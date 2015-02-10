@@ -33,6 +33,9 @@ ModelImporter:
     4300006: FlashlightFront
     7400000: flashlightOpen
     7400002: flashlightIdle
+    7400004: flashlight_closed
+    7400006: Take 001
+    7400008: Take 0010
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -51,10 +54,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: flashlightOpen
+      name: Take 001
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 35
+      lastFrame: 1.10000002
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -93,10 +96,10 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: flashlightIdle
+      name: Take 0010
       takeName: Take 001
-      firstFrame: 1
-      lastFrame: 1.10000002
+      firstFrame: 34.9000015
+      lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -155,7 +158,7 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []
