@@ -6,10 +6,12 @@ public class Puzzle1 : MonoBehaviour {
 	public GameObject[] winConditions;
 	bool win = false;
 	GameObject winningSpotlight;
+	GameObject winningPuzzleLight;
 
 	// Use this for initialization
 	void Start () {
 		winningSpotlight = GameObject.Find("Spotlight1");
+		winningPuzzleLight = GameObject.Find ("puzzlelight");
 	}
 	
 	// Update is called once per frame
@@ -33,6 +35,7 @@ public class Puzzle1 : MonoBehaviour {
 
 	IEnumerator Win(){
 		AudioManager.s_instance.PlayAudioSource ("success");
+		winningPuzzleLight.GetComponent<Light> ().enabled = true;
 		while (winningSpotlight.GetComponent<Light>().spotAngle < 160) {
 			yield return new WaitForEndOfFrame();
 			winningSpotlight.GetComponent<Light>().spotAngle+=5;
