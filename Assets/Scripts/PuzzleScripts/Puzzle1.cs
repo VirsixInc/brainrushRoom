@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Puzzle1 : MonoBehaviour {
 
-	public GameObject[] winConditions = new GameObject[4];
+	public GameObject[] winConditions;
 	bool win = false;
 	GameObject winningSpotlight;
 
