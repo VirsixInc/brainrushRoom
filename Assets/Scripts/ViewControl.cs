@@ -3,17 +3,19 @@ using System.Collections;
 
 public class ViewControl : MonoBehaviour {
 
-	public float turnSpeed = 4.0f;
+	float turnSpeed = 1.0f;
 	public float panSpeed = 4.0f;
 
 	private Vector3 mouseOrigin; 
 	private bool isPanning;
 	private bool isRotating;
-
-
+	float verticalRotation = 0;
+	float downRange = 75;
+	float upRange = 310;
 
 	void Update () 
 	{
+
 		if (Input.GetMouseButtonDown(0)) 
 		{
 			mouseOrigin = Input.mousePosition;
@@ -27,11 +29,15 @@ public class ViewControl : MonoBehaviour {
 
 		if (isRotating) 
 		{
+			verticalRotation = transform.rotation.eulerAngles.x;
 			Vector3 pos = Camera.main.ScreenToViewportPoint (Input.mousePosition - mouseOrigin);
-
-			transform.RotateAround (transform.position, transform.right, -pos.y * turnSpeed);
-			transform.RotateAround (transform.position, Vector3.up, pos.x * turnSpeed);
+			if (verticalRotation - pos.y > upRange || verticalRotation - pos.y < downRange)
+				verticalRotation-=pos.y;
+				transform.rotation = Quaternion.Euler(verticalRotation, transform.rotation.eulerAngles.y, 0); //looking up and down around the right to left axis or transform.right
+			transform.RotateAround (transform.position, Vector3.up, pos.x * turnSpeed); //turning left to right around up down axis or vector up
 		}
+	
+
 	}
 
 
