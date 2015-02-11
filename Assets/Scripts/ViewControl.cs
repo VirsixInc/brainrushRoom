@@ -15,7 +15,7 @@ public class ViewControl : MonoBehaviour {
 
 	void Update () 
 	{
-
+		transform.rotation = Quaternion.Euler (transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
 		if (Input.GetMouseButtonDown(0)) 
 		{
 			mouseOrigin = Input.mousePosition;
@@ -40,7 +40,13 @@ public class ViewControl : MonoBehaviour {
 
 	}
 
+	void OnTriggerEnter (Collider other) {
+		other.enabled = false;
+	}
 
+	void OnTriggerExit (Collider other) {
+		other.enabled = true;
+	}
 
 	
 
