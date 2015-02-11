@@ -14,10 +14,10 @@ public class SwitchingBetweenVoltage : MonoBehaviour {
 		if (bulbToBePlaced.activeSelf == true) {
 			bulb.enabled = true;
 			if (is110v) {
-				bulb.intensity = 100;
+				bulb.intensity = 4;
 			}
 			else
-				bulb.intensity = 200;
+				bulb.intensity = 2;
 			
 		}
 	}
