@@ -5,9 +5,11 @@ public class BreakerBox : MonoBehaviour {
 
 	public Light[] overheadLights;
 	public Animator breakerSwitch;
-	public GameObject breakerHandle;	
+	public GameObject breakerHandle;
+	bool hasBeenPulled = false;
 	void OnMouseDown() {
-		if (breakerHandle.activeSelf) {
+		if (breakerHandle.activeSelf && hasBeenPulled == false) {
+			hasBeenPulled = true;
 			breakerSwitch.SetTrigger ("start");
 			StartCoroutine ("TurnOnLights");
 		}
