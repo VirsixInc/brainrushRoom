@@ -14,6 +14,7 @@ public class BreakerBox : MonoBehaviour {
 	}
 
 	IEnumerator TurnOnLights() {
+		AudioManager.s_instance.PlayAudioSource ("success");
 		while (!breakerSwitch.GetCurrentAnimatorStateInfo(0).IsName("On")) {
 			yield return new WaitForSeconds(0);
 		}
