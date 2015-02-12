@@ -1,0 +1,126 @@
+fileFormatVersion: 2
+guid: 5f5bb203c09022641839adcee5736b02
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: conveyer_All
+    100002: conveyerBox
+    100004: conveyerRollers
+    100006: conveyerTop
+    100008: MiniBelts_Box
+    100010: SolenoidEngine_All
+    100012: SolenoidEngine_Body
+    100014: //RootNode
+    100016: SolenoidEngine_Gears01
+    100018: SolenoidEngine_Gears02
+    100020: SolenoidEngine_Lever
+    100022: SolenoidEngine_OuterGears
+    100024: SolenoidEngine_Piston
+    100026: SolenoidEngine_Switch
+    100028: SolenoidEngine_Wire
+    400000: conveyer_All
+    400002: conveyerBox
+    400004: conveyerRollers
+    400006: conveyerTop
+    400008: MiniBelts_Box
+    400010: SolenoidEngine_All
+    400012: SolenoidEngine_Body
+    400014: //RootNode
+    400016: SolenoidEngine_Gears01
+    400018: SolenoidEngine_Gears02
+    400020: SolenoidEngine_Lever
+    400022: SolenoidEngine_OuterGears
+    400024: SolenoidEngine_Piston
+    400026: SolenoidEngine_Switch
+    400028: SolenoidEngine_Wire
+    2300000: conveyerBox
+    2300002: conveyerRollers
+    2300004: conveyerTop
+    2300006: MiniBelts_Box
+    2300008: SolenoidEngine_Body
+    2300010: SolenoidEngine_Gears01
+    2300012: SolenoidEngine_Gears02
+    2300014: SolenoidEngine_Lever
+    2300016: SolenoidEngine_OuterGears
+    2300018: SolenoidEngine_Piston
+    2300020: SolenoidEngine_Switch
+    2300022: SolenoidEngine_Wire
+    3300000: conveyerBox
+    3300002: conveyerRollers
+    3300004: conveyerTop
+    3300006: MiniBelts_Box
+    3300008: SolenoidEngine_Body
+    3300010: SolenoidEngine_Gears01
+    3300012: SolenoidEngine_Gears02
+    3300014: SolenoidEngine_Lever
+    3300016: SolenoidEngine_OuterGears
+    3300018: SolenoidEngine_Piston
+    3300020: SolenoidEngine_Switch
+    3300022: SolenoidEngine_Wire
+    4300000: conveyerBox
+    4300002: conveyerTop
+    4300004: conveyerRollers
+    4300006: MiniBelts_Box
+    4300008: SolenoidEngine_Switch
+    4300010: SolenoidEngine_Wire
+    4300012: SolenoidEngine_Lever
+    4300014: SolenoidEngine_Piston
+    4300016: SolenoidEngine_Gears02
+    4300018: SolenoidEngine_Gears01
+    4300020: SolenoidEngine_Body
+    4300022: SolenoidEngine_OuterGears
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 

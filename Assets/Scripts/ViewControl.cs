@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ViewControl : MonoBehaviour {
 
-	float turnSpeed = 1.0f;
+	float turnSpeed = 4.0f;
 	public float panSpeed = 4.0f;
 
 	private Vector3 mouseOrigin; 
