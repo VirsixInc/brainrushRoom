@@ -1,0 +1,107 @@
+fileFormatVersion: 2
+guid: e3e2b8ccc76a4ff449964330e4022769
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Battery
+    100002: BatteryCase
+    100004: Solenoid02
+    100006: //RootNode
+    100008: SolSafe_Body
+    100010: SolSafe_Bolt
+    100012: SolSafe_Door
+    100014: SolSafe_Lock
+    100016: SolSafe_TurnLock
+    100018: BatteryCase3
+    400000: Battery
+    400002: BatteryCase
+    400004: Solenoid02
+    400006: //RootNode
+    400008: SolSafe_Body
+    400010: SolSafe_Bolt
+    400012: SolSafe_Door
+    400014: SolSafe_Lock
+    400016: SolSafe_TurnLock
+    400018: BatteryCase3
+    2300000: Battery
+    2300002: BatteryCase
+    2300004: Solenoid02
+    2300006: SolSafe_Body
+    2300008: SolSafe_Bolt
+    2300010: SolSafe_Door
+    2300012: SolSafe_Lock
+    2300014: SolSafe_TurnLock
+    2300016: BatteryCase3
+    3300000: Battery
+    3300002: BatteryCase
+    3300004: Solenoid02
+    3300006: SolSafe_Body
+    3300008: SolSafe_Bolt
+    3300010: SolSafe_Door
+    3300012: SolSafe_Lock
+    3300014: SolSafe_TurnLock
+    3300016: BatteryCase3
+    4300000: SolSafe_Door
+    4300002: SolSafe_Bolt
+    4300004: Solenoid02
+    4300006: SolSafe_TurnLock
+    4300008: SolSafe_Lock
+    4300010: BatteryCase
+    4300012: SolSafe_Body
+    4300014: Battery
+    4300016: BatteryCase3
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
