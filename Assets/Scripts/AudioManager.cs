@@ -7,8 +7,8 @@ public class AudioManager : MonoBehaviour {
 
 	public void PlayAudioSource(string audioSourceName) {
 		GameObject temp = GameObject.Find (audioSourceName);
-		print (audioSourceName);
-		temp.GetComponent<AudioSource> ().Play ();
+		if (!temp.GetComponent<AudioSource> ().isPlaying)
+			temp.GetComponent<AudioSource> ().Play ();
 	}
 
 	// Use this for initialization
