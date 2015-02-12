@@ -4,7 +4,7 @@ using System.Collections;
 public class Conveyor : MonoBehaviour {
 
 	bool isTriggerFlipped = false;
-	public GameObject pieceOfMagnet;
+	public GameObject pieceOfMagnet, lever;
 
 
 	// Use this for initialization
@@ -18,6 +18,8 @@ public class Conveyor : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
+		pieceOfMagnet.GetComponent<Animator> ().SetTrigger ("start");
+		lever.GetComponent<Animator> ().SetTrigger ("start");
 
 	}
 }
