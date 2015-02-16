@@ -23,6 +23,7 @@ public class InventorySlot : MonoBehaviour {
 	public void UseItem () {
 		isHighlighted = false;
 		transform.GetChild (0).gameObject.GetComponent<Image> ().color = Color.black;
+		transform.GetChild (0).gameObject.GetComponent<Image> ().sprite = null;
 		childedPuzzleObject = null;
 	}
 
