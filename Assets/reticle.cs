@@ -13,7 +13,7 @@ public class reticle : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonUp (0)) {
 			clickX = Input.mousePosition.x;
 			clickY = Input.mousePosition.y;
 			camRay = camera.ScreenToWorldPoint (new Vector3(clickX,clickY,zPos));
