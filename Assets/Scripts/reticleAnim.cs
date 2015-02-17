@@ -11,7 +11,6 @@ public class reticleAnim : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.SetParent (player.transform);
 		Destroy (gameObject, Time);
 	}
 

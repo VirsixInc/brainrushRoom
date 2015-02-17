@@ -14,6 +14,7 @@ public class PuzzleObject : MonoBehaviour {
 		collider.enabled = false;
 		InventoryManager.s_instance.addItemToInventory (gameObject);
 		AudioManager.s_instance.PlayAudioSource (soundFileName);
+//		ViewControl.s_instance.
 
 
 	}
