@@ -8,6 +8,7 @@ public class reticle : MonoBehaviour {
 	Vector3 camRay;
 	public float zPos;
 
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -17,6 +18,7 @@ public class reticle : MonoBehaviour {
 			clickX = Input.mousePosition.x;
 			clickY = Input.mousePosition.y;
 			camRay = camera.ScreenToWorldPoint (new Vector3(clickX,clickY,zPos));
+			//camRay = new Vector3(0,0,zPos);
 			GameObject obj = (GameObject) Instantiate(retPrefab, camRay, Quaternion.identity);
 
 		}
