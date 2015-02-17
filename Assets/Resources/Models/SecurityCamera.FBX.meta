@@ -1,13 +1,20 @@
 fileFormatVersion: 2
-guid: c8cc5c7bf3164914a89631a6978af812
+guid: 9c0301a28d062484b903245e9eb65f8f
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: SecurityCamera
+    100004: SecurityCameraBase
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Postits
+    400002: SecurityCamera
+    400004: SecurityCameraBase
+    2300000: SecurityCamera
+    2300002: SecurityCameraBase
+    3300000: SecurityCamera
+    3300002: SecurityCameraBase
+    4300000: SecurityCameraBase
+    4300002: SecurityCamera
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -28,7 +35,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .100000001
+    globalScale: .0500000007
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

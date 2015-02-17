@@ -1,13 +1,50 @@
 fileFormatVersion: 2
-guid: c8cc5c7bf3164914a89631a6978af812
+guid: fccd8bcef3555f34cb73b781bee45a93
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Postits
+    100000: TapePLayerBase
+    100002: TapePLayerbutton1
+    100004: TapePLayerbutton2
+    100006: TapePLayerButton3
+    100008: TapePLayerButton4
+    100010: TapePLayerButton5
+    100012: TapePLayerButton6
+    100014: //RootNode
+    100016: TapePayerBase
+    400000: TapePLayerBase
+    400002: TapePLayerbutton1
+    400004: TapePLayerbutton2
+    400006: TapePLayerButton3
+    400008: TapePLayerButton4
+    400010: TapePLayerButton5
+    400012: TapePLayerButton6
+    400014: //RootNode
+    400016: TapePayerBase
+    2300000: TapePLayerBase
+    2300002: TapePLayerbutton1
+    2300004: TapePLayerbutton2
+    2300006: TapePLayerButton3
+    2300008: TapePLayerButton4
+    2300010: TapePLayerButton5
+    2300012: TapePLayerButton6
+    2300014: TapePayerBase
+    3300000: TapePLayerBase
+    3300002: TapePLayerbutton1
+    3300004: TapePLayerbutton2
+    3300006: TapePLayerButton3
+    3300008: TapePLayerButton4
+    3300010: TapePLayerButton5
+    3300012: TapePLayerButton6
+    3300014: TapePayerBase
+    4300000: TapePLayerButton6
+    4300002: TapePLayerButton4
+    4300004: TapePLayerButton5
+    4300006: TapePLayerButton3
+    4300008: TapePLayerbutton2
+    4300010: TapePLayerbutton1
+    4300012: TapePLayerBase
+    4300014: TapePayerBase
     9500000: //RootNode
   materials:
     importMaterials: 1

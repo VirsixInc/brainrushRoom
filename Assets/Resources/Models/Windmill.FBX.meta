@@ -1,13 +1,20 @@
 fileFormatVersion: 2
-guid: c8cc5c7bf3164914a89631a6978af812
+guid: 8749f33ad88a9c645bab74892dba232d
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: WindmillBase
+    100004: WindmillBlades
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Postits
+    400002: WindmillBase
+    400004: WindmillBlades
+    2300000: WindmillBase
+    2300002: WindmillBlades
+    3300000: WindmillBase
+    3300002: WindmillBlades
+    4300000: WindmillBase
+    4300002: WindmillBlades
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -28,7 +35,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .100000001
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -60,6 +67,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 

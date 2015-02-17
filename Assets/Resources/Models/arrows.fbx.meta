@@ -1,16 +1,33 @@
 fileFormatVersion: 2
-guid: c8cc5c7bf3164914a89631a6978af812
+guid: bd018300bc2bf2747a5bdbf91f5c94a9
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: down
+    100004: left
+    100006: right
+    100008: up
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Postits
+    400002: down
+    400004: left
+    400006: right
+    400008: up
+    2300000: down
+    2300002: left
+    2300004: right
+    2300006: up
+    3300000: down
+    3300002: left
+    3300004: right
+    3300006: up
+    4300000: left
+    4300002: up
+    4300004: right
+    4300006: down
     9500000: //RootNode
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
@@ -28,7 +45,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .100000001
+    globalScale: .5
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -60,6 +77,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 

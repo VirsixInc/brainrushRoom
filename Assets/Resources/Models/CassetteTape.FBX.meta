@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c8cc5c7bf3164914a89631a6978af812
+guid: ad52ec5c443817a489e9e8ce6ccbb55e
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,7 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Postits
+    4300000: CassetteTape
     9500000: //RootNode
   materials:
     importMaterials: 1
