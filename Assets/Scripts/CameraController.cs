@@ -30,8 +30,8 @@ public class CameraController : MonoBehaviour {
 
 	
 	// Update is called once per frame
-	public void SpawnReticle(float clickX, float clickY) {
-		camRay = camera.ScreenToWorldPoint (new Vector3(clickX,clickY,zPos));
+	public void SpawnReticle() {
+		camRay = camera.ScreenToWorldPoint (new Vector3(InputManager.positionOfLastTap.x,InputManager.positionOfLastTap.y,zPos));
 		GameObject obj = (GameObject) Instantiate(retPrefab, camRay, Quaternion.identity);
 		obj.transform.SetParent (Camera.main.transform);
 	}
@@ -41,6 +41,22 @@ public class CameraController : MonoBehaviour {
 	}
 	void DisableRotateCamera(){
 		isRotating = false;
+	}
+
+	void RayCastClick() {
+		RaycastHit hit;
+		Ray ray = camera.ScreenPointToRay (InputManager.positionOfLastTap);
+		if (Physics.Raycast (ray, out hit)) {
+			if (hit.collider.gameObject.tag == "clickableObj") {
+				hit.collider.gameObject.SendMessage("OnClick");
+				SpawnReticle();
+			}
+			else if (hit.collider.gameObject.tag == "cameraMove") {
+				hit.collider.gameObject.SendMessage("OnClick");
+				//spawn opaque circle
+			}
+		}
+
 	}
 
 	void RotateCamera() {
@@ -59,11 +75,14 @@ public class CameraController : MonoBehaviour {
 	void OnEnable() {
 		InputManager.HeldDown += EnableRotateCamera;
 		InputManager.ReleaseHold += DisableRotateCamera;
+		InputManager.Tapped += RayCastClick;
 	}
 
 	void OnDisable() {
 		InputManager.HeldDown -= EnableRotateCamera;
 		InputManager.ReleaseHold -= DisableRotateCamera;
+		InputManager.Tapped -= RayCastClick;
+
 	}
 	
 }
