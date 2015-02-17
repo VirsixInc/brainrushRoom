@@ -1,25 +1,20 @@
 fileFormatVersion: 2
-guid: 3386a9c63128dbc42a38fdc9c736af6e
+guid: 8749f33ad88a9c645bab74892dba232d
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: SelectButton_Center
-    100002: SelectButton_LeftArrow
-    100004: SelectButton_RightArrow
-    100006: //RootNode
-    400000: SelectButton_Center
-    400002: SelectButton_LeftArrow
-    400004: SelectButton_RightArrow
-    400006: //RootNode
-    2300000: SelectButton_Center
-    2300002: SelectButton_LeftArrow
-    2300004: SelectButton_RightArrow
-    3300000: SelectButton_Center
-    3300002: SelectButton_LeftArrow
-    3300004: SelectButton_RightArrow
-    4300000: SelectButton_RightArrow
-    4300002: SelectButton_Center
-    4300004: SelectButton_LeftArrow
+    100000: //RootNode
+    100002: WindmillBase
+    100004: WindmillBlades
+    400000: //RootNode
+    400002: WindmillBase
+    400004: WindmillBlades
+    2300000: WindmillBase
+    2300002: WindmillBlades
+    3300000: WindmillBase
+    3300002: WindmillBlades
+    4300000: WindmillBase
+    4300002: WindmillBlades
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -40,7 +35,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .100000001
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -72,6 +67,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 

@@ -1,25 +1,50 @@
 fileFormatVersion: 2
-guid: 3386a9c63128dbc42a38fdc9c736af6e
+guid: fccd8bcef3555f34cb73b781bee45a93
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: SelectButton_Center
-    100002: SelectButton_LeftArrow
-    100004: SelectButton_RightArrow
-    100006: //RootNode
-    400000: SelectButton_Center
-    400002: SelectButton_LeftArrow
-    400004: SelectButton_RightArrow
-    400006: //RootNode
-    2300000: SelectButton_Center
-    2300002: SelectButton_LeftArrow
-    2300004: SelectButton_RightArrow
-    3300000: SelectButton_Center
-    3300002: SelectButton_LeftArrow
-    3300004: SelectButton_RightArrow
-    4300000: SelectButton_RightArrow
-    4300002: SelectButton_Center
-    4300004: SelectButton_LeftArrow
+    100000: TapePLayerBase
+    100002: TapePLayerbutton1
+    100004: TapePLayerbutton2
+    100006: TapePLayerButton3
+    100008: TapePLayerButton4
+    100010: TapePLayerButton5
+    100012: TapePLayerButton6
+    100014: //RootNode
+    100016: TapePayerBase
+    400000: TapePLayerBase
+    400002: TapePLayerbutton1
+    400004: TapePLayerbutton2
+    400006: TapePLayerButton3
+    400008: TapePLayerButton4
+    400010: TapePLayerButton5
+    400012: TapePLayerButton6
+    400014: //RootNode
+    400016: TapePayerBase
+    2300000: TapePLayerBase
+    2300002: TapePLayerbutton1
+    2300004: TapePLayerbutton2
+    2300006: TapePLayerButton3
+    2300008: TapePLayerButton4
+    2300010: TapePLayerButton5
+    2300012: TapePLayerButton6
+    2300014: TapePayerBase
+    3300000: TapePLayerBase
+    3300002: TapePLayerbutton1
+    3300004: TapePLayerbutton2
+    3300006: TapePLayerButton3
+    3300008: TapePLayerButton4
+    3300010: TapePLayerButton5
+    3300012: TapePLayerButton6
+    3300014: TapePayerBase
+    4300000: TapePLayerButton6
+    4300002: TapePLayerButton4
+    4300004: TapePLayerButton5
+    4300006: TapePLayerButton3
+    4300008: TapePLayerbutton2
+    4300010: TapePLayerbutton1
+    4300012: TapePLayerBase
+    4300014: TapePayerBase
     9500000: //RootNode
   materials:
     importMaterials: 1
