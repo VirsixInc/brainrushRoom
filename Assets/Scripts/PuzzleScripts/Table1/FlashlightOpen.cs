@@ -19,7 +19,7 @@ public class FlashlightOpen : MonoBehaviour {
 
 	}
 
-	void OnMouseDown(){
+	void OnClick(){
 		myAnimator.SetTrigger("switch");
 		if (myLight.activeSelf == true && battery.activeSelf == true && myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Flashlight_Closed")) {
 			PickUpFlashlight();

@@ -7,7 +7,7 @@ public class BreakerBox : MonoBehaviour {
 	public Animator breakerSwitch;
 	public GameObject breakerHandle;
 	bool hasBeenPulled = false;
-	void OnMouseDown() {
+	void OnClick() {
 		if (breakerHandle.activeSelf && hasBeenPulled == false) {
 			hasBeenPulled = true;
 			breakerSwitch.SetTrigger ("start");

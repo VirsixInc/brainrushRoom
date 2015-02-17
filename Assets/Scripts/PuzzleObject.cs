@@ -9,7 +9,7 @@ public class PuzzleObject : MonoBehaviour {
 	public string soundFileName;
 
 
-	void OnMouseDown() {
+	void OnClick() {
 		renderer.enabled = false;
 		collider.enabled = false;
 		InventoryManager.s_instance.addItemToInventory (gameObject);
