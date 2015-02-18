@@ -10,6 +10,8 @@ public class CameraController : MonoBehaviour {
 	float verticalRotation = 0;
 	float downRange = 75;
 	float upRange = 310;
+	public GameObject arrowOverlay,upArrow, downArrow, rightArrow, leftArrow;
+
 
 	public GameObject retPrefab;
 	Vector3 camRay;
@@ -37,9 +39,11 @@ public class CameraController : MonoBehaviour {
 
 	void EnableRotateCamera(){
 		isRotating = true;
+		arrowOverlay.SetActive(true);
 	}
 	void DisableRotateCamera(){
 		isRotating = false;
+		arrowOverlay.SetActive(false);
 	}
 
 	void RayCastClick() {
@@ -68,7 +72,37 @@ public class CameraController : MonoBehaviour {
 				verticalRotation -= pos.y;
 			transform.rotation = Quaternion.Euler(verticalRotation, transform.rotation.eulerAngles.y, 0); //looking up and down around the right to left axis or transform.right
 			transform.RotateAround (transform.position, Vector3.up, pos.x * turnSpeed); //turning left to right around up down axis or vector up
+			//highlight arrows according to which direction we are turning
+			if (pos.y > 0.1f) {
+				upArrow.SetActive(true);
+				downArrow.SetActive(false);
+			}
+			else if (pos.y < -.1f) {
+				upArrow.SetActive(false);
+				downArrow.SetActive(true);
+			}
+
+			else if (pos.y <= .1 && pos.y >= -.1) {
+				upArrow.SetActive(false);
+				downArrow.SetActive(false);
+			}
+			if (pos.x < -.1f) {
+				rightArrow.SetActive(false);
+				leftArrow.SetActive(true);
+			}
+			
+			else if (pos.x > 0.1f) {
+				rightArrow.SetActive(true);
+				leftArrow.SetActive(false);
+			}
+			else if (pos.x <= .1 && pos.x >= -.1) {
+				rightArrow.SetActive(false);
+				leftArrow.SetActive(false);
+			}
+
 		}
+
+
 	}
 
 	void OnEnable() {
