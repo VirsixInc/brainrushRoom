@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
 
 	public List<GameObject>[] winConditions;
 	int curEvent;
-	public float cameraDistance;
+	public float cameraDistance = 10;
 
 	//Vars for camera movement
 

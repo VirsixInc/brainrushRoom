@@ -4,8 +4,7 @@ using System.Collections;
 public class CameraController : MonoBehaviour {
 
 	float turnSpeed = 4.0f;
-	public float panSpeed = 4.0f;
-	
+
 	private bool isPanning;
 	private bool isRotating = false;
 	float verticalRotation = 0;
@@ -60,12 +59,12 @@ public class CameraController : MonoBehaviour {
 	}
 
 	void RotateCamera() {
-		transform.rotation = Quaternion.Euler (transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
+		transform.rotation = Quaternion.Euler (transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0); //make sure that z rotation is always zero
 		if (isRotating) 
 		{
-			verticalRotation = transform.rotation.eulerAngles.x;
+			verticalRotation = transform.rotation.eulerAngles.x; //vertical rotation is along the x axis
 			Vector3 pos = Camera.main.ScreenToViewportPoint (InputManager.currentCursorPosition - InputManager.positionOfLastTap);
-			if (verticalRotation - pos.y > upRange || verticalRotation - pos.y < downRange)
+			if (verticalRotation - pos.y > upRange || verticalRotation - pos.y < downRange) //makes it so you cannot look all the way up or down
 				verticalRotation -= pos.y;
 			transform.rotation = Quaternion.Euler(verticalRotation, transform.rotation.eulerAngles.y, 0); //looking up and down around the right to left axis or transform.right
 			transform.RotateAround (transform.position, Vector3.up, pos.x * turnSpeed); //turning left to right around up down axis or vector up

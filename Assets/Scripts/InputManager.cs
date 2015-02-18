@@ -38,8 +38,7 @@ public class InputManager : MonoBehaviour {
 		
 		public void EnableCounter() //start timer to help determine whether has tapped or is holding down
 		{
-			positionOfLastTap = Camera.main.ScreenToWorldPoint(
-				new Vector3(Input.mousePosition.x,Input.mousePosition.y, GameManager.s_instance.cameraDistance));
+			positionOfLastTap = Input.mousePosition;
 			timeOfClick = Time.time;
 			holdCounter = true;
 		}
@@ -65,7 +64,7 @@ public class InputManager : MonoBehaviour {
 		
 		void Update()
 		{
-			positionOfLastTap = Input.mousePosition;
+			currentCursorPosition = Input.mousePosition;
 			if (holdCounter)
 			{
 				holdTime = Time.time - timeOfClick;
