@@ -22,7 +22,7 @@ public class SwitchingBetweenVoltage : MonoBehaviour {
 		}
 	}
 
-	void OnMouseDown () {
+	void OnClick () {
 		switchMover.SetTrigger ("start");
 		is110v = !is110v;
 	}

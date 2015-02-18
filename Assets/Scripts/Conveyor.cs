@@ -17,7 +17,7 @@ public class Conveyor : MonoBehaviour {
 	
 	}
 
-	void OnMouseDown() {
+	void OnClick() {
 		if (isTriggerFlipped == false) {
 			pieceOfMagnet.GetComponent<Animator> ().SetTrigger ("start");
 			lever.GetComponent<Animator> ().SetTrigger ("start");

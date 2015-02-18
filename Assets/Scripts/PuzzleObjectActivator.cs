@@ -7,7 +7,7 @@ public class PuzzleObjectActivator : MonoBehaviour {
 	public string soundFileName;
 
 
-	void OnMouseDown() {
+	void OnClick() {
 		InventoryManager.s_instance.UseItem (key);
 		AudioManager.s_instance.PlayAudioSource (soundFileName);
 	}
