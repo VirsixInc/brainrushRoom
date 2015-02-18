@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 6d1ba03716fc2cd4c9a1b6c0816c4301
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Desk01_Drawer
+    100002: Desk01_Drawer01
+    100004: Desk01_Plain
+    100006: Desk01_Short
+    100008: Desk01_ShortDrawers
+    100010: Desk01_ShortDrawers01
+    100012: Desk01_ShortDrawers02
+    100014: Desk01_ShortDrawers03
+    100016: Desk01_ShortDrawers04
+    100018: Desk01_TwoDrawers
+    100020: Desk01_TwoDrawers01
+    100022: Desk01_TwoDrawers02
+    100024: DeskBacking
+    100026: DeskDetail01
+    100028: DeskDetail01 1
+    100030: DeskDetail01 2
+    100032: DeskDetail01 3
+    100034: DeskDetail01 4
+    100036: DeskShelves
+    100038: //RootNode
+    400000: Desk01_Drawer
+    400002: Desk01_Drawer01
+    400004: Desk01_Plain
+    400006: Desk01_Short
+    400008: Desk01_ShortDrawers
+    400010: Desk01_ShortDrawers01
+    400012: Desk01_ShortDrawers02
+    400014: Desk01_ShortDrawers03
+    400016: Desk01_ShortDrawers04
+    400018: Desk01_TwoDrawers
+    400020: Desk01_TwoDrawers01
+    400022: Desk01_TwoDrawers02
+    400024: DeskBacking
+    400026: DeskDetail01
+    400028: DeskDetail01 1
+    400030: DeskDetail01 2
+    400032: DeskDetail01 3
+    400034: DeskDetail01 4
+    400036: DeskShelves
+    400038: //RootNode
+    2300000: Desk01_Drawer
+    2300002: Desk01_Drawer01
+    2300004: Desk01_Plain
+    2300006: Desk01_Short
+    2300008: Desk01_ShortDrawers
+    2300010: Desk01_ShortDrawers01
+    2300012: Desk01_ShortDrawers02
+    2300014: Desk01_ShortDrawers03
+    2300016: Desk01_ShortDrawers04
+    2300018: Desk01_TwoDrawers
+    2300020: Desk01_TwoDrawers01
+    2300022: Desk01_TwoDrawers02
+    2300024: DeskBacking
+    2300026: DeskDetail01
+    2300028: DeskDetail01 1
+    2300030: DeskDetail01 2
+    2300032: DeskDetail01 3
+    2300034: DeskDetail01 4
+    2300036: DeskShelves
+    3300000: Desk01_Drawer
+    3300002: Desk01_Drawer01
+    3300004: Desk01_Plain
+    3300006: Desk01_Short
+    3300008: Desk01_ShortDrawers
+    3300010: Desk01_ShortDrawers01
+    3300012: Desk01_ShortDrawers02
+    3300014: Desk01_ShortDrawers03
+    3300016: Desk01_ShortDrawers04
+    3300018: Desk01_TwoDrawers
+    3300020: Desk01_TwoDrawers01
+    3300022: Desk01_TwoDrawers02
+    3300024: DeskBacking
+    3300026: DeskDetail01
+    3300028: DeskDetail01 1
+    3300030: DeskDetail01 2
+    3300032: DeskDetail01 3
+    3300034: DeskDetail01 4
+    3300036: DeskShelves
+    4300000: Desk01_ShortDrawers
+    4300002: DeskDetail01
+    4300004: Desk01_ShortDrawers01
+    4300006: Desk01_ShortDrawers02
+    4300008: Desk01_ShortDrawers03
+    4300010: Desk01_ShortDrawers04
+    4300012: Desk01_Short
+    4300014: DeskDetail01
+    4300016: Desk01_TwoDrawers
+    4300018: DeskDetail01
+    4300020: Desk01_TwoDrawers01
+    4300022: Desk01_TwoDrawers02
+    4300024: Desk01_Drawer
+    4300026: DeskDetail01
+    4300028: Desk01_Drawer01
+    4300030: Desk01_Plain
+    4300032: DeskDetail01
+    4300034: DeskBacking
+    4300036: DeskShelves
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
