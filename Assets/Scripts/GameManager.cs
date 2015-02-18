@@ -4,32 +4,73 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
-  public GameObject highlightedObj;
+	public GameObject highlightedObj;
 
-  public static GameManager s_instance;
+	public static GameManager s_instance;
 
-  public List<GameObject>[] winConditions;
+	public List<GameObject>[] winConditions;
 	int curEvent;
+	public float cameraDistance;
 
-  //Vars for camera movement
+	//Vars for camera movement
 
-  Transform camObj;
-  bool cameraMove;
+	Transform camObj;
+	bool cameraMove;
 
-  Vector3 startPos;
-  Vector3 endPos;
-  float startTime;
-  float journeyLength;
-  float speed = 9f;
-  float cameraRotSpeed = 0.05f;
+	Vector3 startPos;
+	Vector3 endPos;
+	float startTime;
+	float journeyLength;
+	float speed = 9f;
+	float cameraRotSpeed = 0.05f;
 
-  //Vars for puzzleEvent
+	//Vars for puzzleEvent
 	void Start () {
-		s_instance = this;
+	s_instance = this;
 	}
+
+	public delegate void HoldingDownDelegate();
+	public static event HoldingDownDelegate OnHoldingDown;
 	
+	public delegate void ReleaseDelegate();
+	public static event ReleaseDelegate OnRelease;
+	
+
+
+
 	// Update is called once per frame
 	void Update () {
+		//handles input
+		#if UNITY_EDITOR
+		
+		if (Input.GetMouseButtonDown(0) && OnHoldingDown != null) //event called on right-click down
+		{
+			OnHoldingDown();
+		}
+		
+		if (Input.GetMouseButtonUp(0) && OnRelease != null) //event called on right-click up
+		{
+			OnRelease();
+		}
+		
+		#elif UNITY_IPHONE
+		
+		if (Input.GetTouch(0).phase == TouchPhase.Began && OnHoldingDown != null) //when finger is held down
+		{
+			if (Pauser.isPaused == false)
+			{
+				OnHoldingDown();
+			}
+		}
+		
+		if (Input.GetTouch(0).phase == TouchPhase.Ended && OnRelease != null) //when finger is held down
+		{
+			if (Pauser.isPaused == false)
+			{
+				OnRelease();
+			}
+		}
+		#endif
 		if(cameraMove){
 			if (camObj.childCount == 1) {
 				float distCovered = (Time.time-startTime)*speed;
@@ -50,19 +91,14 @@ public class GameManager : MonoBehaviour {
 					cameraMove = false;
 				}
 			}
-
 		}
 	}
-
-	public void CheckHighlightedInventoryObj(string keyName) {
-	}
-
 
 	public void HandleClick(GameObject objClicked){
 		switch(objClicked.tag){
 		case "cameraMove":
-			AudioManager.s_instance.PlayAudioSource("moveToWaypoint");
-			print("CAMERA MOVEMENT EVENT");
+		AudioManager.s_instance.PlayAudioSource("moveToWaypoint");
+		print("CAMERA MOVEMENT EVENT");
 		cameraMove = true;
 		startPos = Camera.main.transform.position;
 		endPos = objClicked.transform.position;
@@ -70,30 +106,13 @@ public class GameManager : MonoBehaviour {
 		startTime = Time.time;
 		camObj = objClicked.transform; //gets the transform of the collider
 		break;
-		case "puzzleEvent":
-		print("PUZZLE EVENT");
-		break;
+		
 		default:
 		print("UNRECOGNIZED TAG");
 		break;
 		}
 	}
 
-	public void goToNextEvent(){
-		int winCount = 0;
-		foreach (GameObject x in winConditions[curEvent]) {
-			if(x.activeSelf){
-				winCount++;
-			}		
-		}
-		if (winCount == winConditions [curEvent].Count) {
-			Win(curEvent);
-			curEvent++;
-		}
-	}
 
-	public void Win(int eventIndex){
-
-	}
 
 }
