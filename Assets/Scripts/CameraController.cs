@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour {
 	float verticalRotation = 0;
 	float downRange = 75;
 	float upRange = 310;
-	public GameObject arrowOverlay,upArrow, downArrow, rightArrow, leftArrow;
+	public GameObject upArrow, downArrow, rightArrow, leftArrow;
 
 
 	public GameObject retPrefab;
@@ -39,11 +39,9 @@ public class CameraController : MonoBehaviour {
 
 	void EnableRotateCamera(){
 		isRotating = true;
-		arrowOverlay.SetActive(true);
 	}
 	void DisableRotateCamera(){
 		isRotating = false;
-		arrowOverlay.SetActive(false);
 	}
 
 	void RayCastClick() {
