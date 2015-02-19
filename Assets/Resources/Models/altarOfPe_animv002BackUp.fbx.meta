@@ -1,0 +1,99 @@
+fileFormatVersion: 2
+guid: 8607eeb1fddb1de4ca711a1f6a61d8e8
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: AltarBody
+    100002: AltarInnerDoor
+    100004: AltarInnerDoorGroup
+    100006: //RootNode
+    100008: AltarOuterDoor
+    100010: AltarOuterDoorGroup
+    100012: Alter_Main
+    100014: alter_rod
+    100016: alterBase
+    100018: spinnyThingy
+    400000: AltarBody
+    400002: AltarInnerDoor
+    400004: AltarInnerDoorGroup
+    400006: //RootNode
+    400008: AltarOuterDoor
+    400010: AltarOuterDoorGroup
+    400012: Alter_Main
+    400014: alter_rod
+    400016: alterBase
+    400018: spinnyThingy
+    2300000: AltarInnerDoor
+    2300002: AltarOuterDoor
+    2300004: Alter_Main
+    2300006: alter_rod
+    2300008: alterBase
+    2300010: spinnyThingy
+    3300000: AltarInnerDoor
+    3300002: AltarOuterDoor
+    3300004: Alter_Main
+    3300006: alter_rod
+    3300008: alterBase
+    3300010: spinnyThingy
+    4300000: alterBase
+    4300002: spinnyThingy
+    4300004: AltarInnerDoor
+    4300006: AltarOuterDoor
+    4300008: Alter_Main
+    4300010: alter_rod
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
