@@ -42,6 +42,10 @@ public class CameraController : MonoBehaviour {
 	}
 	void DisableRotateCamera(){
 		isRotating = false;
+		rightArrow.SetActive(false);
+		leftArrow.SetActive(false);
+		downArrow.SetActive(false);
+		upArrow.SetActive(false);
 	}
 
 	void RayCastClick() {
@@ -99,6 +103,7 @@ public class CameraController : MonoBehaviour {
 			}
 
 		}
+
 
 
 	}
