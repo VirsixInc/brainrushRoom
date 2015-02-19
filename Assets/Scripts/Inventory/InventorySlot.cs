@@ -15,7 +15,7 @@ public class InventorySlot : MonoBehaviour {
 		thisImage = GetComponent<Image> ();
 	}
 
-	public void onClick() {
+	public void OnClick() {
 		transform.parent.SendMessage ("HighLightItem", index);
 	}
 

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+
 
 public class GameManager : MonoBehaviour {
 
@@ -12,6 +14,10 @@ public class GameManager : MonoBehaviour {
 	int curEvent;
 	public float cameraDistance = 10;
 
+	public Image noteDisplayer;
+	public Text textDisplayer; //when you click on a 
+
+
 	//Vars for camera movement
 
 	Transform camObj;
@@ -21,7 +27,7 @@ public class GameManager : MonoBehaviour {
 	Vector3 endPos;
 	float startTime;
 	float journeyLength;
-	float speed = 9f;
+	float speed = 20f;
 	float cameraRotSpeed = 0.05f;
 
 	//Vars for puzzleEvent

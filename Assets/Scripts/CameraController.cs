@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class CameraController : MonoBehaviour {
 	float downRange = 75;
 	float upRange = 310;
 	public GameObject upArrow, downArrow, rightArrow, leftArrow;
+
 
 
 	public GameObject retPrefab;
