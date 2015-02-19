@@ -100,6 +100,17 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public void EnableNote(string noteContents) {
+		textDisplayer.text = noteContents;
+		textDisplayer.gameObject.SetActive (true);
+		noteDisplayer.gameObject.SetActive (true);
+	}
+
+	public void DisableNote() {
+		textDisplayer.gameObject.SetActive (false);
+		noteDisplayer.gameObject.SetActive (false);
+	}
+
 	public void HandleClick(GameObject objClicked){
 		switch(objClicked.tag){
 		case "cameraMove":
