@@ -12,6 +12,10 @@ ModelImporter:
     100012: TapePLayerButton6
     100014: //RootNode
     100016: TapePayerBase
+    100018: polySurface4
+    100020: polySurface5
+    100022: TapePlayer_Door
+    100024: TapePlayerBase
     400000: TapePLayerBase
     400002: TapePLayerbutton1
     400004: TapePLayerbutton2
@@ -21,6 +25,10 @@ ModelImporter:
     400012: TapePLayerButton6
     400014: //RootNode
     400016: TapePayerBase
+    400018: polySurface4
+    400020: polySurface5
+    400022: TapePlayer_Door
+    400024: TapePlayerBase
     2300000: TapePLayerBase
     2300002: TapePLayerbutton1
     2300004: TapePLayerbutton2
@@ -29,6 +37,10 @@ ModelImporter:
     2300010: TapePLayerButton5
     2300012: TapePLayerButton6
     2300014: TapePayerBase
+    2300016: polySurface4
+    2300018: polySurface5
+    2300020: TapePlayer_Door
+    2300022: TapePlayerBase
     3300000: TapePLayerBase
     3300002: TapePLayerbutton1
     3300004: TapePLayerbutton2
@@ -37,6 +49,10 @@ ModelImporter:
     3300010: TapePLayerButton5
     3300012: TapePLayerButton6
     3300014: TapePayerBase
+    3300016: polySurface4
+    3300018: polySurface5
+    3300020: TapePlayer_Door
+    3300022: TapePlayerBase
     4300000: TapePLayerButton6
     4300002: TapePLayerButton4
     4300004: TapePLayerButton5
@@ -45,6 +61,10 @@ ModelImporter:
     4300010: TapePLayerbutton1
     4300012: TapePLayerBase
     4300014: TapePayerBase
+    4300016: polySurface4
+    4300018: polySurface5
+    4300020: TapePlayer_Door
+    4300022: TapePlayerBase
     9500000: //RootNode
   materials:
     importMaterials: 1
