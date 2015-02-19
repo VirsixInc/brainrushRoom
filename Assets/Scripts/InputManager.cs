@@ -39,7 +39,6 @@ public class InputManager : MonoBehaviour {
 		public void EnableCounter() //start timer to help determine whether has tapped or is holding down
 		{
 			positionOfLastTap = Input.mousePosition;
-			currentCursorPosition = Input.mousePosition;
 			timeOfClick = Time.time;
 			holdCounter = true;
 		}
