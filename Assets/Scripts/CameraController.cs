@@ -12,6 +12,8 @@ public class CameraController : MonoBehaviour {
 	float downRange = 75;
 	float upRange = 310;
 	public GameObject upArrow, downArrow, rightArrow, leftArrow;
+	public Image noteDisplayer;
+	public Text textDisplayer; //when you click on a note this is the text it shows
 
 
 
@@ -51,19 +53,25 @@ public class CameraController : MonoBehaviour {
 	}
 
 	void RayCastClick() {
-		RaycastHit hit;
-		Ray ray = camera.ScreenPointToRay (InputManager.positionOfLastTap);
-		if (Physics.Raycast (ray, out hit)) {
-			if (hit.collider.gameObject.tag == "clickableObj") {
-				hit.collider.gameObject.SendMessage("OnClick");
-				SpawnReticle();
-			}
-			else if (hit.collider.gameObject.tag == "cameraMove") {
-				hit.collider.gameObject.SendMessage("OnClick");
-				//spawn opaque circle
-			}
-		}
 
+		if (GameManager.s_instance.currentGameState == GameState.Playing) {
+				RaycastHit hit;
+				Ray ray = camera.ScreenPointToRay (InputManager.positionOfLastTap);
+				if (Physics.Raycast (ray, out hit)) {
+					if (hit.collider.gameObject.tag == "clickableObj") {
+							hit.collider.gameObject.SendMessage ("OnClick");
+							SpawnReticle ();
+					} else if (hit.collider.gameObject.tag == "cameraMove") {
+							hit.collider.gameObject.SendMessage ("OnClick");
+							//spawn opaque circle
+					} else if (hit.collider.gameObject.tag == "stickyNote") {
+						EnableNote(hit.collider.gameObject.GetComponent<StickyNote>().whatStickyNoteSays);
+					} 
+
+				}
+		} else if (GameManager.s_instance.currentGameState == GameState.ReadingNote) {
+			DisableNote();
+		}
 	}
 
 	void RotateCamera() {
@@ -120,6 +128,23 @@ public class CameraController : MonoBehaviour {
 		InputManager.HeldDown -= EnableRotateCamera;
 		InputManager.ReleaseHold -= DisableRotateCamera;
 		InputManager.Tapped -= RayCastClick;
+
+	}
+
+	public void EnableNote(string noteContents) {
+		print (noteContents);
+		textDisplayer.text = noteContents;
+		textDisplayer.gameObject.SetActive (true);
+		noteDisplayer.gameObject.SetActive (true);
+		GameManager.s_instance.currentGameState = GameState.ReadingNote;
+		AudioManager.s_instance.PlayAudioSource ("paper");
+
+	}
+	
+	public void DisableNote() {
+		textDisplayer.gameObject.SetActive (false);
+		noteDisplayer.gameObject.SetActive (false);
+		GameManager.s_instance.currentGameState = GameState.Playing;
 
 	}
 	

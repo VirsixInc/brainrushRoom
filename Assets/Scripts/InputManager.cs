@@ -38,44 +38,49 @@ public class InputManager : MonoBehaviour {
 		
 		public void EnableCounter() //start timer to help determine whether has tapped or is holding down
 		{
+			if (GameManager.s_instance.currentGameState == GameState.Playing) {
+				positionOfLastTap = Input.mousePosition;
+				timeOfClick = Time.time;
+				holdCounter = true;
+			}
+			
+
+		else {
+			//for when you are not exploring the room you are in a menu and only taps exist
 			positionOfLastTap = Input.mousePosition;
-			timeOfClick = Time.time;
-			holdCounter = true;
+			Tapped();
+		}
 		}
 		
 		public void DisableCounter()
 		{
-			if (holdTime <= timeRequiredToTriggerHold)
-			{
-				if ( Tapped != null )
-				{
-					Tapped();
+				if (GameManager.s_instance.currentGameState == GameState.Playing) {
+
+						if (holdTime <= timeRequiredToTriggerHold) {
+								if (Tapped != null) {
+										Tapped ();
+								}
+						} else {
+								if (ReleaseHold != null) {
+										ReleaseHold ();
+								}
+						}
+						holdCounter = false;
 				}
-			}
-			else
-			{
-				if ( ReleaseHold != null )
-				{
-					ReleaseHold();
-				}
-			}
-			holdCounter = false;
 		}
-		
 		void Update()
 		{
-			currentCursorPosition = Input.mousePosition;
-			if (holdCounter)
-			{
-				holdTime = Time.time - timeOfClick;
-				if (holdTime > timeRequiredToTriggerHold)
-				{
-					holdCounter = false;
-					if ( HeldDown != null ) 
-					{
-						HeldDown();
+		if (GameManager.s_instance.currentGameState == GameState.Playing) {
+					currentCursorPosition = Input.mousePosition; 
+					if (holdCounter) {								//games it so tapping is different from holding down
+							holdTime = Time.time - timeOfClick;
+							if (holdTime > timeRequiredToTriggerHold) {
+									holdCounter = false;
+									if (HeldDown != null) {
+											HeldDown ();
+									}
+							}
 					}
-				}
 			}
 		}
 		

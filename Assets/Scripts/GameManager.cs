@@ -3,8 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+public enum GameState {Playing, StartMenu, Menu, ReadingNote};
+
 
 public class GameManager : MonoBehaviour {
+
+	public GameState currentGameState = GameState.Playing;
 
 	public GameObject highlightedObj;
 
@@ -14,8 +18,7 @@ public class GameManager : MonoBehaviour {
 	int curEvent;
 	public float cameraDistance = 10;
 
-	public Image noteDisplayer;
-	public Text textDisplayer; //when you click on a 
+
 
 
 	//Vars for camera movement
@@ -100,16 +103,7 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	public void EnableNote(string noteContents) {
-		textDisplayer.text = noteContents;
-		textDisplayer.gameObject.SetActive (true);
-		noteDisplayer.gameObject.SetActive (true);
-	}
 
-	public void DisableNote() {
-		textDisplayer.gameObject.SetActive (false);
-		noteDisplayer.gameObject.SetActive (false);
-	}
 
 	public void HandleClick(GameObject objClicked){
 		switch(objClicked.tag){
