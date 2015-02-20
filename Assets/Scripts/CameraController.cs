@@ -70,7 +70,7 @@ public class CameraController : MonoBehaviour {
 
 				}
 		} else if (GameManager.s_instance.currentGameState == GameState.ReadingNote) {
-			DisableNote();
+			StartCoroutine("DisableNote");
 		}
 	}
 
@@ -111,11 +111,7 @@ public class CameraController : MonoBehaviour {
 				rightArrow.SetActive(false);
 				leftArrow.SetActive(false);
 			}
-
 		}
-
-
-
 	}
 
 	void OnEnable() {
@@ -141,7 +137,8 @@ public class CameraController : MonoBehaviour {
 
 	}
 	
-	public void DisableNote() {
+	IEnumerator DisableNote() {
+		yield return new WaitForSeconds (0.3f);
 		textDisplayer.gameObject.SetActive (false);
 		noteDisplayer.gameObject.SetActive (false);
 		GameManager.s_instance.currentGameState = GameState.Playing;
