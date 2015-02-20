@@ -31,11 +31,14 @@ public class GameManager : MonoBehaviour {
 	float startTime;
 	float journeyLength;
 	public float speed;
+	float initSpeed;
 	float cameraRotSpeed = 0.05f;
+	bool isSpeedBoosting;
 
 	//Vars for puzzleEvent
 	void Start () {
 	s_instance = this;
+		initSpeed = speed;
 	}
 
 	public delegate void HoldingDownDelegate();
@@ -43,8 +46,6 @@ public class GameManager : MonoBehaviour {
 	
 	public delegate void ReleaseDelegate();
 	public static event ReleaseDelegate OnRelease;
-	
-
 
 
 	// Update is called once per frame
@@ -109,7 +110,6 @@ public class GameManager : MonoBehaviour {
 		switch(objClicked.tag){
 		case "cameraMove":
 		AudioManager.s_instance.PlayAudioSource("moveToWaypoint");
-		print("CAMERA MOVEMENT EVENT");
 		cameraMove = true;
 		startPos = Camera.main.transform.position;
 		endPos = objClicked.transform.position;

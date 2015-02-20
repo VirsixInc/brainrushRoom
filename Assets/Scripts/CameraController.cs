@@ -31,7 +31,7 @@ public class CameraController : MonoBehaviour {
 	{	if (isRotating)
 			RotateCamera ();
 	}
-	
+
 
 	
 	// Update is called once per frame
