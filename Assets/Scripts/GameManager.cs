@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour {
 		}
 		#endif
 		if(cameraMove){
-			if (camObj.childCount == 1) {
+			if (camObj.childCount == 2 && camObj.GetChild(0).gameObject.name == "lookAtObj") {
 				float distCovered = (Time.time-startTime)*speed;
 				float fracJourney = distCovered/journeyLength;
 				Camera.main.transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour {
 					cameraMove = false;
 				}
 			}
-			else if (camObj.childCount == 0) {
+			else if (camObj.childCount == 1) {
 				float distCovered = (Time.time-startTime)*speed;
 				float fracJourney = distCovered/journeyLength;
 				Camera.main.transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
