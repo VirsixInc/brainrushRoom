@@ -63,22 +63,16 @@ public class GameManager : MonoBehaviour {
 			OnRelease();
 		}
 		
-		#elif UNITY_IPHONE
+		#elif UNITY_ANDROID
 		
 		if (Input.GetTouch(0).phase == TouchPhase.Began && OnHoldingDown != null) //when finger is held down
 		{
-			if (Pauser.isPaused == false)
-			{
-				OnHoldingDown();
-			}
+			OnHoldingDown();
 		}
 		
 		if (Input.GetTouch(0).phase == TouchPhase.Ended && OnRelease != null) //when finger is held down
 		{
-			if (Pauser.isPaused == false)
-			{
-				OnRelease();
-			}
+			OnRelease();
 		}
 		#endif
 		if(cameraMove){

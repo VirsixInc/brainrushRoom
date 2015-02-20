@@ -84,18 +84,26 @@ public class InputManager : MonoBehaviour {
 			}
 		}
 		
-		#elif UNITY_IPHONE
+		#elif UNITY_ANDROID
 		
 		public void EnableCounter()
 		{
-			PositionOfLastTap = Camera.main.ScreenToWorldPoint(
-				new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, PlayerController.cameraDistance));
-			timeOfClick = Time.time;
-			holdCounter = true;
+			if (GameManager.s_instance.currentGameState == GameState.Playing) {
+				PositionOfLastTap = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, GameManager.s_instance.cameraDistance);
+				timeOfClick = Time.time;
+				holdCounter = true;
+			}
+		else {
+			//for when you are not exploring the room you are in a menu and only taps exist
+			positionOfLastTap = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, GameManager.s_instance.cameraDistance);
+			Tapped();
+		}
+
 		}
 		
 		public void DisableCounter()
 		{
+			if (GameManager.s_instance.currentGameState == GameState.Playing) {
 			if (holdTime <= timeRequiredToTriggerHold)
 			{
 				if ( Tapped != null )
@@ -111,26 +119,26 @@ public class InputManager : MonoBehaviour {
 				}
 			}
 			holdCounter = false;
+			}
 		}
 		
 		
 		
-		void Update()
-		{
-			
-			if (holdCounter)
-			{
+	void Update()
+	{
+		if (GameManager.s_instance.currentGameState == GameState.Playing) {
+			currentCursorPosition = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, GameManager.s_instance.cameraDistance);
+			if (holdCounter) {								//games it so tapping is different from holding down
 				holdTime = Time.time - timeOfClick;
-				if (holdTime > timeRequiredToTriggerHold)
-				{
+				if (holdTime > timeRequiredToTriggerHold) {
 					holdCounter = false;
-					if ( HeldDown != null ) 
-					{
-						HeldDown();
+					if (HeldDown != null) {
+						HeldDown ();
 					}
 				}
 			}
 		}
+	}
 		
 		
 		#endif
