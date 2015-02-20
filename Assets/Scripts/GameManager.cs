@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour {
 	Vector3 endPos;
 	float startTime;
 	float journeyLength;
-	float speed = 20f;
+	float speed = 100f;
 	float cameraRotSpeed = 0.05f;
 
 	//Vars for puzzleEvent

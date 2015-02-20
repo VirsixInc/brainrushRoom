@@ -5,39 +5,43 @@ public class Drawer : MonoBehaviour {
 	bool isDrawing = false;
 	bool isPulledOut = false;
 	float startTime;
-	float speed, journeyLength;
+	float speed = 3, journeyLength = 5;
+	float currentX;
 
 	//NOTE: The drawer must have two child transforms, one where it is, and one where its pull out to
-
-	void Start () {
-		journeyLength = Vector3.Distance (transform.GetChild (0).position, transform.GetChild (1).position);
+	void Awake() {
+		currentX = transform.position.x;
 	}
 
 	// Use this for initialization
 	void OnClick () {
-		startTime = Time.time;
-		isDrawing = true;
+		if (isDrawing == false) { //so that you cant glitch open in the middle of a pull out
+						startTime = Time.time;
+						isDrawing = true;
+				}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(isDrawing){
-			if (isPulledOut){
+			if (!isPulledOut){
 			float distCovered = (Time.time-startTime)*speed;
 			float fracJourney = distCovered/journeyLength;
-			transform.position = Vector3.Lerp(transform.GetChild (0).position, transform.GetChild (1).position, fracJourney);
+				transform.position = Vector3.Lerp(new Vector3(currentX, transform.position.y, transform.position.z),new Vector3(currentX - journeyLength, transform.position.y, transform.position.z), fracJourney);
 			if(fracJourney > 1.0f){
 				isDrawing = false;
 				isPulledOut = true;
 			}
 			}
 			else {
+				print ("else");
+
 				float distCovered = (Time.time-startTime)*speed;
 				float fracJourney = distCovered/journeyLength;
-				transform.position = Vector3.Lerp(transform.GetChild (0).position, transform.GetChild (1).position, fracJourney);
+				transform.position = Vector3.Lerp(new Vector3(currentX - journeyLength, transform.position.y, transform.position.z),new Vector3(currentX, transform.position.y, transform.position.z), fracJourney);
 				if(fracJourney > 1.0f){
 					isDrawing = false;
-					isPulledOut = true;
+					isPulledOut = false;
 				}
 			}
 }
