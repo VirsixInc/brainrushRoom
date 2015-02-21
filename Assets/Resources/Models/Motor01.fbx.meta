@@ -8,23 +8,28 @@ ModelImporter:
     100004: //RootNode
     100006: Motor01
     100008: Motor01_Spin
+    100010: Motor01_Wires
     400000: Battery
     400002: BatteryCase
     400004: //RootNode
     400006: Motor01
     400008: Motor01_Spin
+    400010: Motor01_Wires
     2300000: Battery
     2300002: BatteryCase
     2300004: Motor01
     2300006: Motor01_Spin
+    2300008: Motor01_Wires
     3300000: Battery
     3300002: BatteryCase
     3300004: Motor01
     3300006: Motor01_Spin
+    3300008: Motor01_Wires
     4300000: BatteryCase
     4300002: Battery
     4300004: Motor01_Spin
     4300006: Motor01
+    4300008: Motor01_Wires
     9500000: //RootNode
   materials:
     importMaterials: 1
