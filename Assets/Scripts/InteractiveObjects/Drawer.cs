@@ -12,7 +12,7 @@ public class Drawer : MonoBehaviour {
 
 	//NOTE: The drawer must have two child transforms, one where it is, and one where its pull out to
 	void Awake() {
-		currentX = transform.position.x;
+		currentX = transform.localPosition.x;
 	}
 
 	// Use this for initialization
@@ -29,7 +29,7 @@ public class Drawer : MonoBehaviour {
 			if (!isPulledOut){
 			float distCovered = (Time.time-startTime)*speed;
 			float fracJourney = distCovered/journeyLength;
-				transform.position = Vector3.Lerp(new Vector3(currentX, transform.position.y, transform.position.z),new Vector3(directionInversion*(currentX - journeyLength), transform.position.y, transform.position.z), fracJourney);
+				transform.localPosition = Vector3.Lerp(new Vector3(currentX, transform.localPosition.y, transform.localPosition.z),new Vector3(directionInversion*(currentX - journeyLength), transform.localPosition.y, transform.localPosition.z), fracJourney);
 			if(fracJourney > 1.0f){
 				isDrawing = false;
 				isPulledOut = true;
@@ -40,7 +40,7 @@ public class Drawer : MonoBehaviour {
 
 				float distCovered = (Time.time-startTime)*speed;
 				float fracJourney = distCovered/journeyLength;
-				transform.position = Vector3.Lerp(new Vector3(directionInversion*(currentX - journeyLength), transform.position.y, transform.position.z),new Vector3(currentX, transform.position.y, transform.position.z), fracJourney);
+				transform.localPosition = Vector3.Lerp(new Vector3(directionInversion*(currentX - journeyLength), transform.localPosition.y, transform.localPosition.z),new Vector3(currentX, transform.localPosition.y, transform.localPosition.z), fracJourney);
 				if(fracJourney > 1.0f){
 					isDrawing = false;
 					isPulledOut = false;
