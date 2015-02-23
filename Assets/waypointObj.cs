@@ -14,22 +14,16 @@ public class waypointObj : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		print ("my god");
 		if (other.gameObject.tag == "MainCamera") {
-			 
 			transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled = false;
-
 		}
 
 
 	}
 
 	void OnTriggerExit(Collider other){
-		
 		if (other.gameObject.tag == "MainCamera") {
-			
 			transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled = true;
-			
 		}
 		
 		
