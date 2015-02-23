@@ -89,7 +89,7 @@ public class InputManager : MonoBehaviour {
 		public void EnableCounter()
 		{
 			if (GameManager.s_instance.currentGameState == GameState.Playing) {
-				PositionOfLastTap = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, GameManager.s_instance.cameraDistance);
+				positionOfLastTap = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, GameManager.s_instance.cameraDistance);
 				timeOfClick = Time.time;
 				holdCounter = true;
 			}
