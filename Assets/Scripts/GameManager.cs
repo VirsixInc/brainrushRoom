@@ -31,14 +31,12 @@ public class GameManager : MonoBehaviour {
 	float startTime;
 	float journeyLength;
 	public float speed;
-	float initSpeed;
 	float cameraRotSpeed = 0.05f;
 	bool isSpeedBoosting;
 
 	//Vars for puzzleEvent
 	void Start () {
 	s_instance = this;
-		initSpeed = speed;
 	}
 
 	public delegate void HoldingDownDelegate();
@@ -76,7 +74,7 @@ public class GameManager : MonoBehaviour {
 		}
 		#endif
 		if(cameraMove){
-			if (camObj.childCount == 2 && camObj.GetChild(0).gameObject.name == "lookAtObj") {
+			if (camObj.childCount >= 2 && camObj.GetChild(0).gameObject.name == "lookAtObj") {
 				float distCovered = (Time.time-startTime)*speed;
 				float fracJourney = distCovered/journeyLength;
 				Camera.main.transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
@@ -87,7 +85,7 @@ public class GameManager : MonoBehaviour {
 					cameraMove = false;
 				}
 			}
-			else if (camObj.childCount == 1) {
+			else if (camObj.childCount < 2) {
 				float distCovered = (Time.time-startTime)*speed;
 				float fracJourney = distCovered/journeyLength;
 				Camera.main.transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
@@ -103,14 +101,14 @@ public class GameManager : MonoBehaviour {
 	public void HandleClick(GameObject objClicked){
 		switch(objClicked.tag){
 		case "cameraMove":
-		AudioManager.s_instance.PlayAudioSource("moveToWaypoint");
-		cameraMove = true;
-		startPos = Camera.main.transform.position;
-		endPos = objClicked.transform.position;
-		journeyLength = Vector3.Distance(startPos, endPos);
-		startTime = Time.time;
-		camObj = objClicked.transform; //gets the transform of the collider
-		break;
+			AudioManager.s_instance.PlayAudioSource("moveToWaypoint");
+			cameraMove = true;
+			startPos = Camera.main.transform.position;
+			endPos = objClicked.transform.position;
+			journeyLength = Vector3.Distance(startPos, endPos);
+			startTime = Time.time;
+			camObj = objClicked.transform; //gets the transform of the collider
+			break;
 		
 		default:
 		print("UNRECOGNIZED TAG");
