@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
 
 	//Vars for puzzleEvent
 	void Start () {
-	s_instance = this;
+		s_instance = this;
 	}
 
 	public delegate void HoldingDownDelegate();
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour {
 	
 	public delegate void ReleaseDelegate();
 	public static event ReleaseDelegate OnRelease;
+
 
 
 	// Update is called once per frame
@@ -65,7 +66,7 @@ public class GameManager : MonoBehaviour {
 				float distCovered = (Time.time-startTime)*speed;
 				float fracJourney = distCovered/journeyLength;
 				Camera.main.transform.position = Vector3.Lerp(startPos, endPos, fracJourney);
-				if(fracJourney > 1.0f){
+				if(fracJourney > 1.0f) {
 					cameraMove = false;
 				}
 			}

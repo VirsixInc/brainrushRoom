@@ -33,7 +33,12 @@ public class InventoryManager : MonoBehaviour {
 	public void HighLightItem(int i) {
 		AudioManager.s_instance.PlayAudioSource ("beep");
 		//if clicking on an item that is currently highlighted -> unhighlight it
-		if (inventory [i].GetComponent<InventorySlot> ().isHighlighted == true) {
+
+		if (inventory [i].GetComponent<InventorySlot> ().isFlashlight == true) {
+			CameraController.s_instance.ToggleFlashLight();
+		}
+
+		else if (inventory [i].GetComponent<InventorySlot> ().isHighlighted == true) {
 			inventory [i].GetComponent<InventorySlot> ().UnHighlightItem();
 			isASlotHighlighted = false;
 		}

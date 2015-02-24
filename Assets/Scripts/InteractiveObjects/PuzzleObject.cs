@@ -7,13 +7,16 @@ public class PuzzleObject : MonoBehaviour {
 	public GameObject gameObjectInActivatedState;
 	public Sprite inventoryImage;
 	public string soundFileName;
+	public bool isOnclickable = true;
 
 
 	void OnClick() {
-		renderer.enabled = false;
-		collider.enabled = false;
-		InventoryManager.s_instance.addItemToInventory (gameObject);
-		AudioManager.s_instance.PlayAudioSource (soundFileName);
+		if (isOnclickable) {
+			renderer.enabled = false;
+			collider.enabled = false;
+			InventoryManager.s_instance.addItemToInventory (gameObject);
+			AudioManager.s_instance.PlayAudioSource (soundFileName);
+		}
 //		ViewControl.s_instance.
 
 
