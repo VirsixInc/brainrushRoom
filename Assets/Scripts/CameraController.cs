@@ -26,7 +26,6 @@ public class CameraController : MonoBehaviour {
 	void Awake() {
 		s_instance = this;
 		Screen.orientation = ScreenOrientation.Landscape;
-		ScreenOrientation.AutoRotation = false;
 	}
 	
 	void Update () 
