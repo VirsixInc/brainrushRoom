@@ -48,31 +48,7 @@ public class GameManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		//handles input
-		#if UNITY_EDITOR
-		
-		if (Input.GetMouseButtonDown(0) && OnHoldingDown != null) //event called on right-click down
-		{
-			OnHoldingDown();
-		}
-		
-		if (Input.GetMouseButtonUp(0) && OnRelease != null) //event called on right-click up
-		{
-			OnRelease();
-		}
-		
-		#elif UNITY_ANDROID
-		
-		if (Input.GetTouch(0).phase == TouchPhase.Began && OnHoldingDown != null) //when finger is held down
-		{
-			OnHoldingDown();
-		}
-		
-		if (Input.GetTouch(0).phase == TouchPhase.Ended && OnRelease != null) //when finger is held down
-		{
-			OnRelease();
-		}
-		#endif
+
 		if(cameraMove){
 			if (camObj.childCount >= 2 && camObj.GetChild(0).gameObject.name == "lookAtObj") {
 				float distCovered = (Time.time-startTime)*speed;
@@ -94,6 +70,33 @@ public class GameManager : MonoBehaviour {
 				}
 			}
 		}
+
+		//handles input
+		#if UNITY_EDITOR
+		
+		if (Input.GetMouseButtonDown(0) && OnHoldingDown != null) //event called on right-click down
+		{
+			OnHoldingDown();
+		}
+		
+		if (Input.GetMouseButtonUp(0) && OnRelease != null) //event called on right-click up
+		{
+			OnRelease();
+		}
+		
+		#elif UNITY_ANDROID
+		
+		if (Input.GetTouch(0).phase == TouchPhase.Began) //when finger is held down
+		{
+			OnHoldingDown();
+		}
+		
+		if (Input.GetTouch(0).phase == TouchPhase.Ended) //when finger is held down
+		{
+			OnRelease();
+		}
+		#endif
+
 	}
 
 
