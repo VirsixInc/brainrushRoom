@@ -15,7 +15,8 @@ public class InventoryManager : MonoBehaviour {
 	public GameObject inventorySlotPrefab;
 	public List<GameObject> inventory;
 	public int currentHighlightedSlot = 0;
-	public bool isASlotHighlighted = false; 
+	public bool isASlotHighlighted = false;
+	public int keyPiecesPickedup = 0;
 
 
 	void Start() {
@@ -23,7 +24,7 @@ public class InventoryManager : MonoBehaviour {
 		//populates the inventory with Inventory Slots - modularly
 		for (int i = 0; i < numberOfItemsInInventory; i++) {
 			GameObject tempSlot;
-			tempSlot = Instantiate(inventorySlotPrefab,new Vector3(inventoryX, inventoryY + (i * distanceBetweenInventoryItems), inventoryZ),Quaternion.identity) as GameObject;
+			tempSlot = Instantiate(inventorySlotPrefab, new Vector3(inventoryX, inventoryY + (i * distanceBetweenInventoryItems), inventoryZ),Quaternion.identity) as GameObject;
 			tempSlot.GetComponent<InventorySlot>().index = i;
 			inventory.Add(tempSlot);
 
