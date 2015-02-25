@@ -6,7 +6,7 @@ public class InventorySlot : MonoBehaviour {
 	
 	public GameObject childedPuzzleObject; //the key that goes to the chest
 	Image thisImage;
-	public bool isHighlighted = false;
+	public bool isHighlighted = false, isFlashlight = false;
 	public int index;
 
 	void Start() {
@@ -39,6 +39,11 @@ public class InventorySlot : MonoBehaviour {
 	}
 
 	public void AttachItem (GameObject newPuzzleObject) {
+		print (newPuzzleObject.name);
+		if (newPuzzleObject.name == "Flashlight_Anim") {
+			isFlashlight = true;
+			print ("FLASHLIGHT");
+		}
 		childedPuzzleObject = newPuzzleObject;
 		transform.GetChild (0).gameObject.GetComponent<Image> ().sprite =  newPuzzleObject.GetComponent<PuzzleObject> ().inventoryImage;
 		transform.GetChild (0).gameObject.GetComponent<Image> ().color = Color.white;

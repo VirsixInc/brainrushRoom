@@ -14,7 +14,9 @@ public class CameraController : MonoBehaviour {
 	public GameObject upArrow, downArrow, rightArrow, leftArrow;
 	public Image noteDisplayer;
 	public Text textDisplayer; //when you click on a note this is the text it shows
+	public Light flashlight;
 
+	
 
 
 	public GameObject retPrefab;
@@ -26,6 +28,8 @@ public class CameraController : MonoBehaviour {
 	void Awake() {
 		s_instance = this;
 		Screen.orientation = ScreenOrientation.Landscape;
+		flashlight = GetComponentInChildren<Light> ();
+
 	}
 	
 	void Update () 
@@ -33,7 +37,9 @@ public class CameraController : MonoBehaviour {
 			RotateCamera ();
 	}
 
-
+	public void ToggleFlashLight(){
+		flashlight.enabled = !flashlight.enabled;
+	}
 	
 	// Update is called once per frame
 	public void SpawnReticle() {
