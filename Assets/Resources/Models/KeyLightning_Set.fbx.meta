@@ -1,27 +1,40 @@
 fileFormatVersion: 2
-guid: 3bad10fe58086b647b547ae1dbfbcd01
+guid: aeb6205b030c5a74285f16dc6c244b1f
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Generator_Button
-    100004: Generator_Rotator
-    100006: GeneratorMain
+    100002: LightningKey_End
+    100004: LightningKey_Mid
+    100006: LightningKey_Top
+    100008: LightningKeySilhouette
+    100010: LightningKey_Silhouette
+    100012: polySurface2
     400000: //RootNode
-    400002: Generator_Button
-    400004: Generator_Rotator
-    400006: GeneratorMain
-    2300000: Generator_Button
-    2300002: Generator_Rotator
-    2300004: GeneratorMain
-    2300006: //RootNode
-    3300000: Generator_Button
-    3300002: Generator_Rotator
-    3300004: GeneratorMain
-    3300006: //RootNode
-    4300000: Generator_Button
-    4300002: GeneratorMain
-    4300004: Generator_Rotator
+    400002: LightningKey_End
+    400004: LightningKey_Mid
+    400006: LightningKey_Top
+    400008: LightningKeySilhouette
+    400010: LightningKey_Silhouette
+    400012: polySurface2
+    2300000: LightningKey_End
+    2300002: LightningKey_Mid
+    2300004: LightningKey_Top
+    2300006: LightningKeySilhouette
+    2300008: LightningKey_Silhouette
+    2300010: polySurface2
+    3300000: LightningKey_End
+    3300002: LightningKey_Mid
+    3300004: LightningKey_Top
+    3300006: LightningKeySilhouette
+    3300008: LightningKey_Silhouette
+    3300010: polySurface2
+    4300000: LightningKey_Top
+    4300002: LightningKey_Mid
+    4300004: LightningKey_End
+    4300006: LightningKeySilhouette
+    4300008: LightningKey_Silhouette
+    4300010: polySurface2
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -32,7 +45,7 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -42,7 +55,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .0500000007
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -74,6 +87,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
