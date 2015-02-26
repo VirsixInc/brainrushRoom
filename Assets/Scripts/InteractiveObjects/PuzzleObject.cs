@@ -17,9 +17,6 @@ public class PuzzleObject : MonoBehaviour {
 			InventoryManager.s_instance.addItemToInventory (gameObject);
 			AudioManager.s_instance.PlayAudioSource (soundFileName);
 		}
-//		ViewControl.s_instance.
-
-
 	}
 	
 }

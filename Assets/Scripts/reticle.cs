@@ -18,7 +18,6 @@ public class reticle : MonoBehaviour {
 			clickX = Input.mousePosition.x;
 			clickY = Input.mousePosition.y;
 			camRay = camera.ScreenToWorldPoint (new Vector3(clickX,clickY,zPos));
-			//camRay = new Vector3(0,0,zPos);
 			Instantiate(retPrefab, camRay, Quaternion.identity);
 
 		}

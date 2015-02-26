@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour {
 
 	//InventoryManager makes sure that only one slot is highlighted at a time.
@@ -16,7 +17,9 @@ public class InventoryManager : MonoBehaviour {
 	public List<GameObject> inventory;
 	public int currentHighlightedSlot = 0;
 	public bool isASlotHighlighted = false;
-	public int keyPiecesPickedup = 0;
+	public int keyPiecesPickedup = 0, currentKey = 0;
+	public Text keyPieces;
+	public GameObject[] keys; //maybe we need some sort of animation to play when we put in these keys into the doors
 
 
 	void Start() {
@@ -29,6 +32,20 @@ public class InventoryManager : MonoBehaviour {
 			inventory.Add(tempSlot);
 
 		}
+	}
+
+	void Update() {
+		keyPieces.text = keyPiecesPickedup.ToString () + " / 3";
+	}
+
+	public void PickUpKey() {
+		keyPiecesPickedup ++;
+		if (keyPiecesPickedup == 3) {
+			addItemToInventory(keys[currentKey]);
+			keyPiecesPickedup = 0;
+			currentKey++;
+		}
+
 	}
 
 	public void HighLightItem(int i) {
