@@ -5,7 +5,7 @@ public class BreakerBox : MonoBehaviour {
 
 	public Light[] overheadLights;
 	public Animator breakerSwitch;
-	public GameObject breakerHandle;
+	public GameObject breakerHandle, key;
 	bool hasBeenPulled = false;
 	void OnClick() {
 		if (breakerHandle.activeSelf && hasBeenPulled == false) {
@@ -25,6 +25,8 @@ public class BreakerBox : MonoBehaviour {
 		foreach (Light x in overheadLights)
 			x.gameObject.SetActive (true);
 		Camera.main.transform.GetChild (0).gameObject.SetActive (false);
+		key.SetActive (true);
+
 	}
 
 }

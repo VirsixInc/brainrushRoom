@@ -5,7 +5,7 @@ public class Puzzle1 : MonoBehaviour {
 
 	public GameObject[] winConditions;
 	bool win = false;
-	public GameObject winningPuzzleLight;
+	public GameObject winningPuzzleLight, keyPiece;
 	
 	// Update is called once per frame
 	void Update () {
@@ -29,6 +29,7 @@ public class Puzzle1 : MonoBehaviour {
 	void Win(){
 		AudioManager.s_instance.PlayAudioSource ("success");
 		winningPuzzleLight.GetComponent<Light> ().enabled = true;
+		keyPiece.SetActive (true);
 		
 	}
 }

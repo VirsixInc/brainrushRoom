@@ -5,7 +5,7 @@ public class ElectroMagnet : MonoBehaviour {
 
 	public GameObject wire, battery;
 	bool isComplete;
-	public Animator robotArm;
+	public Animator bulb;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +25,10 @@ public class ElectroMagnet : MonoBehaviour {
 
 	void ExecuteWinFunction() {
 		// have animator of arm
-		if (robotArm != null)
-			robotArm.SetTrigger ("start");
+		if (bulb != null) {
+			bulb.SetTrigger ("start");
+			AudioManager.s_instance.PlayAudioSource("magnet");
+
+			}
 	}
 }

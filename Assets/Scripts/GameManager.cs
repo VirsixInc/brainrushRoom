@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
 	float startTime;
 	float journeyLength;
 	public float speed;
-	float cameraRotSpeed = 0.05f;
+	float cameraRotSpeed = 0.3f;
 	bool isSpeedBoosting;
 
 	//Vars for puzzleEvent
