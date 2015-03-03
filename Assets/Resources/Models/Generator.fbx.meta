@@ -7,21 +7,26 @@ ModelImporter:
     100002: Generator_Button
     100004: Generator_Rotator
     100006: GeneratorMain
+    100008: Generator_Wires
     400000: //RootNode
     400002: Generator_Button
     400004: Generator_Rotator
     400006: GeneratorMain
+    400008: Generator_Wires
     2300000: Generator_Button
     2300002: Generator_Rotator
     2300004: GeneratorMain
     2300006: //RootNode
+    2300008: Generator_Wires
     3300000: Generator_Button
     3300002: Generator_Rotator
     3300004: GeneratorMain
     3300006: //RootNode
+    3300008: Generator_Wires
     4300000: Generator_Button
     4300002: GeneratorMain
     4300004: Generator_Rotator
+    4300006: Generator_Wires
     9500000: //RootNode
   materials:
     importMaterials: 1

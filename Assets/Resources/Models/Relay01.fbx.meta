@@ -11,6 +11,8 @@ ModelImporter:
     100010: Relay
     100012: //RootNode
     100014: RelayNubbin
+    100016: Relay_Wires
+    100018: RelayMain
     400000: Battery1
     400002: BatteryCase4
     400004: curve1
@@ -19,18 +21,26 @@ ModelImporter:
     400010: Relay
     400012: //RootNode
     400014: RelayNubbin
+    400016: Relay_Wires
+    400018: RelayMain
     2300000: Battery1
     2300002: BatteryCase4
     2300004: Relay
     2300006: RelayNubbin
+    2300008: Relay_Wires
+    2300010: RelayMain
     3300000: Battery1
     3300002: BatteryCase4
     3300004: Relay
     3300006: RelayNubbin
+    3300008: Relay_Wires
+    3300010: RelayMain
     4300000: RelayNubbin
     4300002: Battery1
     4300004: BatteryCase4
     4300006: Relay
+    4300008: Relay_Wires
+    4300010: RelayMain
     9500000: //RootNode
   materials:
     importMaterials: 1
