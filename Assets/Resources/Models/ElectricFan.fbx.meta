@@ -4,10 +4,20 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: FanBase
+    100004: FanBlades
     400000: //RootNode
+    400002: FanBase
+    400004: FanBlades
     2300000: //RootNode
+    2300002: FanBase
+    2300004: FanBlades
     3300000: //RootNode
+    3300002: FanBase
+    3300004: FanBlades
     4300000: ElectricFan
+    4300002: FanBase
+    4300004: FanBlades
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -28,7 +38,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .5
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

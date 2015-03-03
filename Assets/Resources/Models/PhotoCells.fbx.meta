@@ -1,32 +1,20 @@
 fileFormatVersion: 2
-guid: 3bad10fe58086b647b547ae1dbfbcd01
+guid: 4a3ae18c66b34a74897bd898469a49d1
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Generator_Button
-    100004: Generator_Rotator
-    100006: GeneratorMain
-    100008: Generator_Wires
-    400000: //RootNode
-    400002: Generator_Button
-    400004: Generator_Rotator
-    400006: GeneratorMain
-    400008: Generator_Wires
-    2300000: Generator_Button
-    2300002: Generator_Rotator
-    2300004: GeneratorMain
-    2300006: //RootNode
-    2300008: Generator_Wires
-    3300000: Generator_Button
-    3300002: Generator_Rotator
-    3300004: GeneratorMain
-    3300006: //RootNode
-    3300008: Generator_Wires
-    4300000: Generator_Button
-    4300002: GeneratorMain
-    4300004: Generator_Rotator
-    4300006: Generator_Wires
+    100000: PhotoCell
+    100002: PhotoCell_Wire
+    100004: //RootNode
+    400000: PhotoCell
+    400002: PhotoCell_Wire
+    400004: //RootNode
+    2300000: PhotoCell
+    2300002: PhotoCell_Wire
+    3300000: PhotoCell
+    3300002: PhotoCell_Wire
+    4300000: PhotoCell_Wire
+    4300002: PhotoCell
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -37,7 +25,7 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -47,7 +35,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1.5
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
