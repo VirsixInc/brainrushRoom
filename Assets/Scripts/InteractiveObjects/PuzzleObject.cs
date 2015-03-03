@@ -8,6 +8,7 @@ public class PuzzleObject : MonoBehaviour {
 	public Sprite inventoryImage;
 	public string soundFileName;
 	public bool isOnclickable = true;
+	public string displayNotification = "Picked up a PuzzleObject";
 
 
 	void OnClick() {
@@ -16,6 +17,7 @@ public class PuzzleObject : MonoBehaviour {
 			collider.enabled = false;
 			InventoryManager.s_instance.addItemToInventory (gameObject);
 			AudioManager.s_instance.PlayAudioSource (soundFileName);
+			InventoryManager.s_instance.SetNotification(displayNotification);
 		}
 	}
 	
