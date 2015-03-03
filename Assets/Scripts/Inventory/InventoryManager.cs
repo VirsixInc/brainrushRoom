@@ -18,11 +18,13 @@ public class InventoryManager : MonoBehaviour {
 	public int currentHighlightedSlot = 0;
 	public bool isASlotHighlighted = false;
 	public int keyPiecesPickedup = 0, currentKey = 0;
-	public Text keyPieces;
+	public Text keyPieces, notificationText;
 	public GameObject[] keys; //maybe we need some sort of animation to play when we put in these keys into the doors
-
+	bool fadeOut;
+	float startTime, fadeTime = 3;
 
 	void Start() {
+		notificationText = GameObject.Find ("Notification").GetComponent<Text>();
 		s_instance = this;
 		//populates the inventory with Inventory Slots - modularly
 		for (int i = 0; i < numberOfItemsInInventory; i++) {
@@ -34,8 +36,27 @@ public class InventoryManager : MonoBehaviour {
 		}
 	}
 
+	public void SetNotification(string notification) {
+		notificationText.text = notification;
+		notificationText.color = new Color (1f, 1f, 1f, 1f);
+		startTime = Time.time;
+		fadeOut = true;
+	}
+
+
+
 	void Update() {
 		keyPieces.text = keyPiecesPickedup.ToString () + " / 3";
+		if (fadeOut) {
+			float timePassed = (Time.time - startTime);
+			float fracJourney = timePassed / fadeTime;
+			notificationText.color = Color.Lerp (new Color (1f, 1f, 1f, 1f), new Color (1f, 1f, 1f, 0f), fracJourney);
+			if (notificationText.color.a == 0) {
+				fadeOut = false;
+			}
+		}
+		
+
 	}
 
 	public void PickUpKey() {
