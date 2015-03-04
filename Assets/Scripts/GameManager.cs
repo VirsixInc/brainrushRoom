@@ -105,7 +105,8 @@ public class GameManager : MonoBehaviour {
 	public void HandleClick(GameObject objClicked){
 		switch(objClicked.tag){
 		case "cameraMove":
-			AudioManager.s_instance.PlayAudioSource("moveToWaypoint");
+			if (AudioManager.s_instance != null)
+				AudioManager.s_instance.PlayAudioSource("moveToWaypoint");
 			cameraMove = true;
 			startPos = Camera.main.transform.position;
 			endPos = objClicked.transform.position;
