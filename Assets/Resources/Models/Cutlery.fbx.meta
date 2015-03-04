@@ -1,0 +1,87 @@
+fileFormatVersion: 2
+guid: d9cf94f4a4aea354baa766e7b9cbda89
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Cup01
+    100002: //RootNode
+    100004: Fork01
+    100006: Knife01
+    100008: Plate01
+    100010: Spoon01
+    400000: Cup01
+    400002: //RootNode
+    400004: Fork01
+    400006: Knife01
+    400008: Plate01
+    400010: Spoon01
+    2300000: Cup01
+    2300002: Fork01
+    2300004: Knife01
+    2300006: Plate01
+    2300008: Spoon01
+    3300000: Cup01
+    3300002: Fork01
+    3300004: Knife01
+    3300006: Plate01
+    3300008: Spoon01
+    4300000: Plate01
+    4300002: Cup01
+    4300004: Knife01
+    4300006: Spoon01
+    4300008: Fork01
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
