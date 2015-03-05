@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
 	public float cameraDistance = 10;
 
 	public void SaveGame () {
-		PlayerPrefs.SetInt (Application.levelCount);
+//		PlayerPrefs.SetInt (
 	}
 
 
