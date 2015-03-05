@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public enum GameState {Playing, StartMenu, Menu, ReadingNote};
 
-
 public class GameManager : MonoBehaviour {
 
 	public GameState currentGameState = GameState.Playing;
@@ -17,9 +16,10 @@ public class GameManager : MonoBehaviour {
 	public List<GameObject>[] winConditions;
 	int curEvent;
 	public float cameraDistance = 10;
+	GameObject continueButton;
 
 	public void SaveGame () {
-//		PlayerPrefs.SetInt (
+		PlayerPrefs.SetInt ("CurrentLevel", Application.levelCount);
 	}
 
 
@@ -40,6 +40,13 @@ public class GameManager : MonoBehaviour {
 	//Vars for puzzleEvent
 	void Start () {
 		s_instance = this;
+		continueButton = GameObject.Find ("Continue");
+		if (currentGameState == GameState.StartMenu) {
+			if (PlayerPrefs.GetInt("CurrentLevel") != 0)
+				continueButton.SetActive(true);
+		}
+
+
 	}
 
 	public delegate void HoldingDownDelegate();
@@ -52,6 +59,7 @@ public class GameManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
 
 		if(cameraMove){
 			if (camObj.childCount >= 2 && camObj.GetChild(0).gameObject.name == "lookAtObj") {
