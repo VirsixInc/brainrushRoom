@@ -29,6 +29,7 @@ public class CameraController : MonoBehaviour {
 		s_instance = this;
 		Screen.orientation = ScreenOrientation.Landscape;
 		flashlight = GetComponentInChildren<Light> ();
+		textDisplayer = GameObject.Find ("StickyText").GetComponent<Text>();
 
 	}
 	

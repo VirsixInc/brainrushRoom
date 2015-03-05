@@ -7,5 +7,12 @@ public class LoadLevel : MonoBehaviour {
 
 	void OnTriggerEnter() {
 		Application.LoadLevel (level);
+		GameManager.s_instance.currentGameState = GameState.StartMenu;
+	}
+
+	public void OnClick() {
+		Application.LoadLevel (level);
+		GameManager.s_instance.currentGameState = GameState.StartMenu;
+
 	}
 }
