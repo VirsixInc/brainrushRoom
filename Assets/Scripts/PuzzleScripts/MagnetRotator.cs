@@ -7,9 +7,8 @@ public class MagnetRotator : MonoBehaviour {
 	public bool bothRotating = false;
 	public Light bulb;
 	public GameObject bulbToBePlaced;
-	public GameObject key;
 	public Animator leverA, leverB;
-	public GameObject mag1,mag2,mag3,mag4;
+//	public GameObject mag1,mag2,mag3,mag4;
 
 	// Update is called once per frame
 	void Update () {
@@ -18,7 +17,7 @@ public class MagnetRotator : MonoBehaviour {
 			bothRotating = true;	
 		}
 
-		if (bothRotating && bulbToBePlaced.activeSelf && mag1.activeSelf&& mag2.activeSelf&& mag3.activeSelf&& mag4.activeSelf) {
+		if (bothRotating && bulbToBePlaced.activeSelf) {
 			bulb.enabled = true;
 		} 
 
