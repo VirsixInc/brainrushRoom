@@ -29,10 +29,13 @@ public class CameraController : MonoBehaviour {
 		s_instance = this;
 		Screen.orientation = ScreenOrientation.Landscape;
 		flashlight = GetComponentInChildren<Light> ();
-		textDisplayer = GameObject.Find ("StickyText").GetComponent<Text>();
-
 	}
-	
+
+	void Start() {
+		textDisplayer = GameObject.Find ("Notification").GetComponent<Text>();
+		noteDisplayer = GameObject.Find ("Sticky").GetComponent<Image>();
+	}
+
 	void Update () 
 	{	if (isRotating)
 			RotateCamera ();
@@ -139,7 +142,7 @@ public class CameraController : MonoBehaviour {
 		print (noteContents);
 		textDisplayer.text = noteContents;
 		textDisplayer.gameObject.SetActive (true);
-		noteDisplayer.gameObject.SetActive (true);
+		noteDisplayer.gameObject.GetComponent<Image>().enabled = true;
 		GameManager.s_instance.currentGameState = GameState.ReadingNote;
 		AudioManager.s_instance.PlayAudioSource ("paper");
 
@@ -148,7 +151,7 @@ public class CameraController : MonoBehaviour {
 	IEnumerator DisableNote() {
 		yield return new WaitForSeconds (0.3f);
 		textDisplayer.gameObject.SetActive (false);
-		noteDisplayer.gameObject.SetActive (false);
+		noteDisplayer.gameObject.GetComponent<Image>().enabled = false;
 		GameManager.s_instance.currentGameState = GameState.Playing;
 
 	}

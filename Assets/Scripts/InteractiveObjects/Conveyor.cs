@@ -10,7 +10,8 @@ public class Conveyor : MonoBehaviour {
 
 	void OnClick() {
 		if (isTriggerFlipped == false) {
-			pieceOfMagnet.GetComponent<Animator> ().SetTrigger ("start");
+			if (pieceOfMagnet != null)
+				pieceOfMagnet.GetComponent<Animator> ().SetTrigger ("start");
 			lever.GetComponent<Animator> ().SetTrigger ("start");
 			engine.SetTrigger("start");
 			AudioManager.s_instance.PlayAudioSource("rattleSnake");
