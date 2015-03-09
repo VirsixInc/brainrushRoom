@@ -32,7 +32,7 @@ public class CameraController : MonoBehaviour {
 	}
 
 	void Start() {
-		textDisplayer = GameObject.Find ("Notification").GetComponent<Text>();
+		textDisplayer = GameObject.Find ("StickyText").GetComponent<Text>();
 		noteDisplayer = GameObject.Find ("Sticky").GetComponent<Image>();
 	}
 
