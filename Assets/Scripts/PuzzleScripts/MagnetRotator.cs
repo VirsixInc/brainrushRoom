@@ -14,7 +14,7 @@ public class MagnetRotator : MonoBehaviour {
 	void Update () {
 
 		if (leverA.GetCurrentAnimatorStateInfo (0).IsName ("lever2"))
-						particle1.SetActive (true);
+						particle2.SetActive (true);
 		if (leverB.GetCurrentAnimatorStateInfo (0).IsName ("lever2"))
 			particle1.SetActive (true);
 
